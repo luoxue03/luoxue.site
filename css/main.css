@@ -129,7 +129,7 @@ table:not([class]) tr:hover {
   background: var(--block);
 }
 *[ff=title] {
-  font-family: "Zfont", sans-serif;
+  font-family: "Kosugi Maru", sans-serif;
 }
 blockquote {
   display: block;
