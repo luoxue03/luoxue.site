@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Zfont';
+  src: url("/font/RetrahausRegular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --width-left: 288px;
   --width-main: 720px;
@@ -123,7 +129,7 @@ table:not([class]) tr:hover {
   background: var(--block);
 }
 *[ff=title] {
-  font-family: "LXGW WenKai Screen", sans-serif;
+  font-family: "Zfont", sans-serif;
 }
 blockquote {
   display: block;
