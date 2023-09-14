@@ -1357,10 +1357,48 @@ ins.adsbygoogle {
   font-weight: 500;
 }
 .gradient-text {
-  font-size: 30px;
-  background: linear-gradient(to right, #f00, #00f);
-  -webkit-background-clip: text;
-  color: transparent;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #04f3ff, #08ffc6, #ddf730, #ffbd19, #ff1fe0, #c418ff, #04f3ff);
+  background-size: 200%;
+  animation: glow 10s linear infinite;
+}
+@-moz-keyframes glow {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
+}
+@-webkit-keyframes glow {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
+}
+@-o-keyframes glow {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
+}
+@keyframes glow {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
 }
 .nav-wrap {
   position: sticky;
