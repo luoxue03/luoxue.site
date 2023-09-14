@@ -1348,12 +1348,19 @@ ins.adsbygoogle {
   margin: 0.2rem 0;
 }
 .page-footer .text p {
+  text-align: center;
   margin: 4px 0;
   line-height: 1.5;
 }
 .page-footer .text a:not([class]) {
   text-decoration: underline;
   font-weight: 500;
+}
+.page-footer .text-gradient span {
+  background-image: linear-gradient(to right, #ffa500, #800080);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 30px;
 }
 .nav-wrap {
   position: sticky;
