@@ -1356,7 +1356,7 @@ ins.adsbygoogle {
   text-decoration: underline;
   font-weight: 500;
 }
-.page-footer .text-gradient span {
+.text-gradient span {
   background-image: linear-gradient(to right, #ffa500, #800080);
   -webkit-background-clip: text;
   color: transparent;
