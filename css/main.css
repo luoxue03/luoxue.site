@@ -1357,7 +1357,7 @@ ins.adsbygoogle {
   font-weight: 500;
 }
 .gradient-text {
-  font-size: 10px;
+  font-size: 11px;
   background: linear-gradient(to right, #f00, #008b45, #ff7256);
   -webkit-background-clip: text;
   color: transparent;
@@ -1368,7 +1368,7 @@ ins.adsbygoogle {
   -webkit-background-clip: text;
   animation: text-color-gradient 10s ease infinite;
   color: transparent !important;
-  font-size: 10px;
+  font-size: 11px;
 }
 @-moz-keyframes text-color-gradient {
   0% {
