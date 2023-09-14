@@ -1357,47 +1357,61 @@ ins.adsbygoogle {
   font-weight: 500;
 }
 .gradient-text {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  border-radius: 4px;
-  background: linear-gradient(to right, #04f3ff, #08ffc6, #ddf730, #ffbd19, #ff1fe0, #c418ff, #04f3ff);
-  background-size: 200%;
-  animation: glow 10s linear infinite;
+  font-size: 10px;
+  background: linear-gradient(to right, #f00, #008b45, #ff7256);
+  -webkit-background-clip: text;
+  color: transparent;
 }
-@-moz-keyframes glow {
-  from {
-    background-position: 0%;
-  }
-  to {
-    background-position: 200%;
-  }
+.gradient-color-text {
+  background-size: 400% 400%;
+  background-image: linear-gradient(to right, #f00, #ff8000, #fff200, #51ff00, #00d0ff, #9000ff, #ff008c);
+  -webkit-background-clip: text;
+  animation: text-color-gradient 10s ease infinite;
+  color: transparent !important;
+  font-size: 10px;
 }
-@-webkit-keyframes glow {
-  from {
-    background-position: 0%;
+@-moz-keyframes text-color-gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    background-position: 200%;
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
-@-o-keyframes glow {
-  from {
-    background-position: 0%;
+@-webkit-keyframes text-color-gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    background-position: 200%;
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
-@keyframes glow {
-  from {
-    background-position: 0%;
+@-o-keyframes text-color-gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    background-position: 200%;
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes text-color-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 .nav-wrap {
