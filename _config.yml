@@ -4,7 +4,7 @@
 
 # Site
 title: Luoxue
-subtitle: 'Luoxue'
+subtitle: '落雪'
 description: ''
 keywords:
 author: Luoxue
@@ -17,7 +17,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://vercel.luoxue.site
-permalink: :title.heml
+permalink: :title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: false  # Set to false to remove trailing 'index.html' from permalinks
@@ -102,6 +102,19 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: stellar
 
+inject:
+  head:
+  - <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  - <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+  - |
+    <script>
+      if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+         document.querySelector("html").id = "ZYDark";
+      }
+    </script>
+  - <link rel="stylesheet" href="/diy/css/ZYDark.css"> # 黑夜样式
+  script:
+  - <script type="text/javascript" src="/diy/js/ZYDark.js"></script> # 黑夜控制
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

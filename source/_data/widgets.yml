@@ -1,0 +1,7 @@
+welcome:
+    layout: markdown
+    title: '🎉欢迎, 先生亦或是姑娘: '
+    content: |
+        这是一个成分复杂的小站，建于二十一世纪初，至今练习时长两年半，将会继续长期维护和更新。<br>🙏本站评论与动态在Github托管, 显示不全是不能裸连Github。
+        <img id="ZYTheme" style="border-radius: 10px;" src="https://api.szfx.top/info-card/?word=感谢来访钟意博客, 懈怠轻忽."/>
+
