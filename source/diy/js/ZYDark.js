@@ -16,15 +16,18 @@ OSTheme.addListener(e => {
 const ThemeChange = (theme) => {
     if (theme === 'light' || (theme === 'Moss' && !OSTheme.matches)) {
         document.querySelector("html").id = "ZYLight";
-        document.querySelector("#start > aside > footer > div > a:nth-child(6)").style.filter= 'grayscale(0%)';
-        document.querySelector("#start > aside > footer > div > a:nth-child(5)").style.filter= 'grayscale(100%)';
+        document.querySelector("#start > aside > footer > div > a:nth-child(6)").style.filter = 'grayscale(0%)';
+        document.querySelector("#start > aside > footer > div > a:nth-child(5)").style.filter = 'grayscale(100%)';
     } else {
         document.querySelector("html").id = "ZYDark";
-        document.querySelector("#start > aside > footer > div > a:nth-child(5)").style.filter= 'grayscale(0%)';
-        document.querySelector("#start > aside > footer > div > a:nth-child(6)").style.filter= 'grayscale(100%)';
+        document.querySelector("#start > aside > footer > div > a:nth-child(5)").style.filter = 'grayscale(0%)';
+        document.querySelector("#start > aside > footer > div > a:nth-child(6)").style.filter = 'grayscale(100%)';
     }
-    if (theme==='Moss'){document.querySelector("#start > aside > footer > div > a:nth-child(7)").style.filter= 'grayscale(0%)';}
-    else {document.querySelector("#start > aside > footer > div > a:nth-child(7)").style.filter= 'grayscale(100%)';}
+    if (theme === 'Moss') {
+        document.querySelector("#start > aside > footer > div > a:nth-child(7)").style.filter = 'grayscale(0%)';
+    } else {
+        document.querySelector("#start > aside > footer > div > a:nth-child(7)").style.filter = 'grayscale(100%)';
+    }
     window.localStorage.setItem('ZYI_Theme_Mode', theme);
 }
 /**
@@ -40,6 +43,7 @@ switch (window.localStorage.getItem('ZYI_Theme_Mode')) {
     default:
         ThemeChange('Moss');
 }
+
 /**
  * 切换主题模式
  */
@@ -52,3 +56,4 @@ document.querySelector("#start > aside > footer > div > a:nth-child(6)").onclick
 document.querySelector("#start > aside > footer > div > a:nth-child(7)").onclick = () => {
     ThemeChange('Moss');
 }
+

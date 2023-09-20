@@ -6,6 +6,10 @@ style:
     code: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
     codeblock: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
     darkmode: false # auto / always / false
+  codeblock:
+   scrollbar: 4px
+   #highlightjs_theme: https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/atom-one-dark.min.css
+   highlightjs_theme: "/diy/css/ZYCode.css"
 # 页尾
 footer:
   social:

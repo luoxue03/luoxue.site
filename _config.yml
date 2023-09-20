@@ -48,11 +48,11 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: '    '
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
   enable: false
   preprocess: true
@@ -113,8 +113,11 @@ inject:
       }
     </script>
   - <link rel="stylesheet" href="/diy/css/ZYDark.css"> # 黑夜样式
+  - <link rel="stylesheet" href="/diy/css/ZYCode.css"> 
   script:
   - <script type="text/javascript" src="/diy/js/ZYDark.js"></script> # 黑夜控制
+  - <script type="text/javascript" src="/diy/js/ZYCode.js"></script> # 代码复制、折叠
+  - <script src="https://kit.fontawesome.com/06b2d5b226.js" crossorigin="anonymous"></script>
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

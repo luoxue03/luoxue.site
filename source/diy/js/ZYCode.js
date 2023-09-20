@@ -1,11 +1,3 @@
----
-pin: true
-swiper_thumbnail: https://img1.baidu.com/it/u=2331294293,2690342395&fm=253&fmt=auto&app=138&f=PNG?w=567&h=294
----
-# 2023
-# 落霞与孤鹜齐飞
-# 秋水共长天一色
-```JavaScript test.md
 // 这四个常量是复制,复制成功,展开,收缩
 // 我使用的是 https://fontawesome.com/ 图标, 不用可以改为文字.
 const copyText = '<i class="fa-regular fa-copy"  style="color: #aa69ec;"></i>';
@@ -16,10 +8,10 @@ const closeText = '<i class="fa-solid fa-angles-up  fa-beat-fade"></i>';
 const codeElements = document.querySelectorAll('td.code');
 
 codeElements.forEach((code, index) => {
-    const preCode = code.querySelector('pre');
+    const preCode = code.querySelector('pre').children[0];  // 2023.5.11 变成修改到子级才能控制高度, 哪里变了????????
 
     // 设置id和样式
-    preCode.id = `ZYCode${index+1}`;
+    preCode.id = `ZYCode${index + 1}`;
     preCode.style.webkitLineClamp = '6';
 
     // 添加展开/收起按钮
@@ -37,7 +29,9 @@ codeElements.forEach((code, index) => {
         description.appendChild(codeCopyOver);
 
         codeCopyOver.addEventListener('click', () => {
+            console.log("Click!!!" + codeCopyOver.innerHTML + "!!!" + openText)
             if (codeCopyOver.innerHTML === openText) {
+                console.log("YES Open !!!")
                 const scrollTop = document.documentElement.scrollTop;
                 const codeHeight = code.clientHeight;
 
@@ -55,25 +49,25 @@ codeElements.forEach((code, index) => {
     }
 
     // 添加复制按钮
-    // const codeCopyBtn = document.createElement('div');
-    // codeCopyBtn.classList.add('copy-btn');
-    // codeCopyBtn.innerHTML = copyText;
-    // code.appendChild(codeCopyBtn);
+    const codeCopyBtn = document.createElement('div');
+    codeCopyBtn.classList.add('copy-btn');
+    codeCopyBtn.innerHTML = copyText;
+    code.appendChild(codeCopyBtn);
 
     // 添加复制功能
-//     codeCopyBtn.addEventListener('click', async () => {
-//         const currentCodeElement = code.querySelector('pre')?.innerText;
-//         await copyCode(currentCodeElement);
+    codeCopyBtn.addEventListener('click', async () => {
+        const currentCodeElement = code.querySelector('pre')?.innerText;
+        await copyCode(currentCodeElement);
 
-//         codeCopyBtn.innerHTML = copySuccess;
-//         codeCopyBtn.classList.add('success');
+        codeCopyBtn.innerHTML = copySuccess;
+        codeCopyBtn.classList.add('success');
 
-//         setTimeout(() => {
-//             codeCopyBtn.innerHTML = copyText;
-//             codeCopyBtn.classList.remove('success');
-//         }, 3000);
-//     });
-// });
+        setTimeout(() => {
+            codeCopyBtn.innerHTML = copyText;
+            codeCopyBtn.classList.remove('success');
+        }, 3000);
+    });
+});
 
 async function copyCode(currentCode) {
     if (navigator.clipboard) {
@@ -86,5 +80,3 @@ async function copyCode(currentCode) {
         console.error('当前浏览器不支持此API');
     }
 }
-
-```

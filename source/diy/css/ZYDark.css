@@ -1,5 +1,5 @@
 #ZYDark:root {
-  --site-bg: #1c1e21;
+  --site-bg: rgb(28 30 33 / 1);
   --card: #373d43;
   --block: #26292c;
   --block-border: #383d42;
@@ -12,17 +12,21 @@
   --text-meta: #4d4d4d;
   --text-code: #ff6333;
 }
+
 @media screen and (max-width: 667px) {
   #ZYDark:root {
-    --site-bg: #000;
+      --site-bg: #000;
   }
 }
+
 #ZYDark:root {
-  --blur-bg: rgba(0,0,0,0.5);
+  --blur-bg: rgba(0, 0, 0, 0.5);
 }
+
 #ZYDark .float-panel {
-  --blur-bg: rgba(0,0,0,0.4);
+  --blur-bg: rgba(0, 0, 0, 0.4);
 }
+
 #ZYDark .tag-plugin.tag {
   --theme: #ff6333;
   --theme-bg1: #3d1e14;
@@ -32,6 +36,7 @@
   --text-p1: #dfae9f;
   --text-p2: #f1997e;
 }
+
 #ZYDark .tag-plugin[color='red'] {
   --theme: #f44336;
   --theme-bg1: #3d1714;
@@ -41,6 +46,7 @@
   --text-p1: #dfa49f;
   --text-p2: #f1867e;
 }
+
 #ZYDark .tag-plugin[color='orange'] {
   --theme: #fa6400;
   --theme-bg1: #3d2514;
@@ -50,6 +56,7 @@
   --text-p1: #dfb99f;
   --text-p2: #f1ac7e;
 }
+
 #ZYDark .tag-plugin[color='yellow'] {
   --theme: #ffbd2b;
   --theme-bg1: #3d3014;
@@ -59,6 +66,7 @@
   --text-p1: #dfcb9f;
   --text-p2: #f1cd7e;
 }
+
 #ZYDark .tag-plugin[color='green'] {
   --theme: #3dc550;
   --theme-bg1: #143d1a;
@@ -68,6 +76,7 @@
   --text-p1: #9fdfa8;
   --text-p2: #7ef18e;
 }
+
 #ZYDark .tag-plugin[color='cyan'] {
   --theme: #1bcdfc;
   --theme-bg1: #14353d;
@@ -77,6 +86,7 @@
   --text-p1: #9fd2df;
   --text-p2: #7ed9f1;
 }
+
 #ZYDark .tag-plugin[color='blue'] {
   --theme: #2196f3;
   --theme-bg1: #142b3d;
@@ -86,6 +96,7 @@
   --text-p1: #9fc3df;
   --text-p2: #7ebef1;
 }
+
 #ZYDark .tag-plugin[color='purple'] {
   --theme: #9c27b0;
   --theme-bg1: #37143d;
@@ -95,6 +106,7 @@
   --text-p1: #d69fdf;
   --text-p2: #e07ef1;
 }
+
 #ZYDark .tag-plugin[color='light'] {
   --theme-border: #fff;
   --theme-bg1: #e0e0e0;
@@ -105,6 +117,7 @@
   --text-p3: #555;
   --text-code: #fff;
 }
+
 #ZYDark .tag-plugin[color='dark'] {
   --theme-border: #000;
   --theme-bg1: #1f1f1f;
@@ -115,6 +128,7 @@
   --text-p3: #ddd;
   --text-code: #fff;
 }
+
 #ZYDark .tag-plugin[color='warning'],
 #ZYDark .tag-plugin[color='light'] {
   --text-p0: #000;
@@ -123,18 +137,20 @@
   --text-p3: #555;
   --text-code: #fff;
 }
+
 #ZYDark .social-wrap a.social:hover {
   box-shadow: none;
 }
 
 /* waline评论样式 */
-#ZYDark .wl-count{
+#ZYDark .wl-count {
   padding: .375em;
   font-weight: bold;
   font-size: 1.25em;
   color: #fff;
 }
-#ZYDark .cmt-body.waline{
+
+#ZYDark .cmt-body.waline {
   --waline-white: #000;
   --waline-light-grey: #666;
   --waline-dark-grey: #999;
