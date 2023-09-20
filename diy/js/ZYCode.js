@@ -69,14 +69,14 @@ codeElements.forEach((code, index) => {
 //     });
 // });
 
-// async function copyCode(currentCode) {
-//     if (navigator.clipboard) {
-//         try {
-//             await navigator.clipboard.writeText(currentCode);
-//         } catch (error) {
-//             console.error(error);
-//         }
-//     } else {
-//         console.error('当前浏览器不支持此API');
-//     }
-// }
+async function copyCode(currentCode) {
+    if (navigator.clipboard) {
+        try {
+            await navigator.clipboard.writeText(currentCode);
+        } catch (error) {
+            console.error(error);
+        }
+    } else {
+        console.error('当前浏览器不支持此API');
+    }
+}
