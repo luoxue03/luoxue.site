@@ -48,35 +48,35 @@ codeElements.forEach((code, index) => {
         });
     }
 
-    // 添加复制按钮
-    const codeCopyBtn = document.createElement('div');
-    codeCopyBtn.classList.add('copy-btn');
-    codeCopyBtn.innerHTML = copyText;
-    code.appendChild(codeCopyBtn);
+//     // 添加复制按钮
+//     const codeCopyBtn = document.createElement('div');
+//     codeCopyBtn.classList.add('copy-btn');
+//     codeCopyBtn.innerHTML = copyText;
+//     code.appendChild(codeCopyBtn);
 
-    // 添加复制功能
-    codeCopyBtn.addEventListener('click', async () => {
-        const currentCodeElement = code.querySelector('pre')?.innerText;
-        await copyCode(currentCodeElement);
+//     // 添加复制功能
+//     codeCopyBtn.addEventListener('click', async () => {
+//         const currentCodeElement = code.querySelector('pre')?.innerText;
+//         await copyCode(currentCodeElement);
 
-        codeCopyBtn.innerHTML = copySuccess;
-        codeCopyBtn.classList.add('success');
+//         codeCopyBtn.innerHTML = copySuccess;
+//         codeCopyBtn.classList.add('success');
 
-        setTimeout(() => {
-            codeCopyBtn.innerHTML = copyText;
-            codeCopyBtn.classList.remove('success');
-        }, 3000);
-    });
-});
+//         setTimeout(() => {
+//             codeCopyBtn.innerHTML = copyText;
+//             codeCopyBtn.classList.remove('success');
+//         }, 3000);
+//     });
+// });
 
-async function copyCode(currentCode) {
-    if (navigator.clipboard) {
-        try {
-            await navigator.clipboard.writeText(currentCode);
-        } catch (error) {
-            console.error(error);
-        }
-    } else {
-        console.error('当前浏览器不支持此API');
-    }
-}
+// async function copyCode(currentCode) {
+//     if (navigator.clipboard) {
+//         try {
+//             await navigator.clipboard.writeText(currentCode);
+//         } catch (error) {
+//             console.error(error);
+//         }
+//     } else {
+//         console.error('当前浏览器不支持此API');
+//     }
+// }
