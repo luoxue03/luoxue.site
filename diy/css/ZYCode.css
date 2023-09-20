@@ -357,7 +357,7 @@ figcaption span {
 .highlight {
     position: relative;
 }
-
+/* 折叠
 .highlight .code .copy-btn {
     position: absolute;
     top: 0;
@@ -369,7 +369,7 @@ figcaption span {
     cursor: pointer;
     transination: opacity 0.3s;
 }
-
+ */
 .highlight .code .copy-btn:hover {
     color: var(--text-code);
     opacity: 1;
