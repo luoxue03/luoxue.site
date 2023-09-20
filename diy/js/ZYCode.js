@@ -8,10 +8,10 @@ const closeText = '<i class="fa-solid fa-angles-up  fa-beat-fade"></i>';
 const codeElements = document.querySelectorAll('td.code');
 
 codeElements.forEach((code, index) => {
-    const preCode = code.querySelector('pre');
+    const preCode = code.querySelector('pre').children[0];  // 2023.5.11 变成修改到子级才能控制高度, 哪里变了????????
 
     // 设置id和样式
-    preCode.id = `ZYCode${index+1}`;
+    preCode.id = `ZYCode${index + 1}`;
     preCode.style.webkitLineClamp = '6';
 
     // 添加展开/收起按钮
@@ -29,7 +29,9 @@ codeElements.forEach((code, index) => {
         description.appendChild(codeCopyOver);
 
         codeCopyOver.addEventListener('click', () => {
+            console.log("Click!!!" + codeCopyOver.innerHTML + "!!!" + openText)
             if (codeCopyOver.innerHTML === openText) {
+                console.log("YES Open !!!")
                 const scrollTop = document.documentElement.scrollTop;
                 const codeHeight = code.clientHeight;
 
@@ -78,4 +80,3 @@ async function copyCode(currentCode) {
         console.error('当前浏览器不支持此API');
     }
 }
-
