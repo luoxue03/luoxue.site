@@ -5617,7 +5617,7 @@ img[fancybox='true'] {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 4px 0.7rem;
+  padding: 4px 1rem;
   opacity: 0;
   font-weight: 700;
   color: var(--theme);
