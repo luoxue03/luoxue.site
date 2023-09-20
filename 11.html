@@ -51,10 +51,6 @@
   
 
   
-    
-<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/atom-one-dark.min.css">
-
-  
 
   
 
@@ -121,84 +117,84 @@
 
 <article class='md-text content post'>
 
-<h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h1><h1 id="落霞与孤鹜齐飞"><a href="#落霞与孤鹜齐飞" class="headerlink" title="落霞与孤鹜齐飞"></a>落霞与孤鹜齐飞</h1><h1 id="秋水共长天一色"><a href="#秋水共长天一色" class="headerlink" title="秋水共长天一色"></a>秋水共长天一色</h1><pre><code class="hljs js"><span class="hljs-comment">// 这四个常量是复制,复制成功,展开,收缩</span>
-<span class="hljs-comment">// 我使用的是 https://fontawesome.com/ 图标, 不用可以改为文字.</span>
-<span class="hljs-keyword">const</span> copyText = <span class="hljs-string">&#x27;&lt;i class=&quot;fa-regular fa-copy&quot;  style=&quot;color: #aa69ec;&quot;&gt;&lt;/i&gt;&#x27;</span>;
-<span class="hljs-keyword">const</span> copySuccess = <span class="hljs-string">&#x27;&lt;i class=&quot;fa-regular fa-circle-check&quot;  style=&quot;color: limegreen;&quot;&gt;&lt;/i&gt;&#x27;</span>;
-<span class="hljs-keyword">const</span> openText = <span class="hljs-string">&#x27;&lt;i class=&quot;fa-solid fa-angles-down  fa-beat-fade&quot;&gt;&lt;/i&gt;&#x27;</span>;
-<span class="hljs-keyword">const</span> closeText = <span class="hljs-string">&#x27;&lt;i class=&quot;fa-solid fa-angles-up  fa-beat-fade&quot;&gt;&lt;/i&gt;&#x27;</span>;
+<h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h1><h1 id="落霞与孤鹜齐飞"><a href="#落霞与孤鹜齐飞" class="headerlink" title="落霞与孤鹜齐飞"></a>落霞与孤鹜齐飞</h1><h1 id="秋水共长天一色"><a href="#秋水共长天一色" class="headerlink" title="秋水共长天一色"></a>秋水共长天一色</h1><pre><code class="highlight js"><span class="comment">// 这四个常量是复制,复制成功,展开,收缩</span>
+<span class="comment">// 我使用的是 https://fontawesome.com/ 图标, 不用可以改为文字.</span>
+<span class="keyword">const</span> copyText = <span class="string">&#x27;&lt;i class=&quot;fa-regular fa-copy&quot;  style=&quot;color: #aa69ec;&quot;&gt;&lt;/i&gt;&#x27;</span>;
+<span class="keyword">const</span> copySuccess = <span class="string">&#x27;&lt;i class=&quot;fa-regular fa-circle-check&quot;  style=&quot;color: limegreen;&quot;&gt;&lt;/i&gt;&#x27;</span>;
+<span class="keyword">const</span> openText = <span class="string">&#x27;&lt;i class=&quot;fa-solid fa-angles-down  fa-beat-fade&quot;&gt;&lt;/i&gt;&#x27;</span>;
+<span class="keyword">const</span> closeText = <span class="string">&#x27;&lt;i class=&quot;fa-solid fa-angles-up  fa-beat-fade&quot;&gt;&lt;/i&gt;&#x27;</span>;
 
-<span class="hljs-keyword">const</span> codeElements = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">&#x27;td.code&#x27;</span>);
+<span class="keyword">const</span> codeElements = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;td.code&#x27;</span>);
 
-codeElements.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">code, index</span>) =&gt;</span> &#123;
-    <span class="hljs-keyword">const</span> preCode = code.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;pre&#x27;</span>);
+codeElements.<span class="title function_">forEach</span>(<span class="function">(<span class="params">code, index</span>) =&gt;</span> &#123;
+    <span class="keyword">const</span> preCode = code.<span class="title function_">querySelector</span>(<span class="string">&#x27;pre&#x27;</span>);
 
-    <span class="hljs-comment">// 设置id和样式</span>
-    preCode.<span class="hljs-property">id</span> = <span class="hljs-string">`ZYCode<span class="hljs-subst">$&#123;index+<span class="hljs-number">1</span>&#125;</span>`</span>;
-    preCode.<span class="hljs-property">style</span>.<span class="hljs-property">webkitLineClamp</span> = <span class="hljs-string">&#x27;6&#x27;</span>;
+    <span class="comment">// 设置id和样式</span>
+    preCode.<span class="property">id</span> = <span class="string">`ZYCode<span class="subst">$&#123;index+<span class="number">1</span>&#125;</span>`</span>;
+    preCode.<span class="property">style</span>.<span class="property">webkitLineClamp</span> = <span class="string">&#x27;6&#x27;</span>;
 
-    <span class="hljs-comment">// 添加展开/收起按钮</span>
-    <span class="hljs-keyword">if</span> (preCode.<span class="hljs-property">innerHTML</span>.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;&lt;br&gt;&#x27;</span>).<span class="hljs-property">length</span> &gt; <span class="hljs-number">6</span>) &#123;
-        <span class="hljs-keyword">const</span> codeCopyDiv = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;div&#x27;</span>);
-        codeCopyDiv.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;CodeCloseDiv&#x27;</span>);
-        code.<span class="hljs-property">parentNode</span>.<span class="hljs-property">parentNode</span>.<span class="hljs-property">parentNode</span>.<span class="hljs-property">parentNode</span>.<span class="hljs-title function_">appendChild</span>(codeCopyDiv);
+    <span class="comment">// 添加展开/收起按钮</span>
+    <span class="keyword">if</span> (preCode.<span class="property">innerHTML</span>.<span class="title function_">split</span>(<span class="string">&#x27;&lt;br&gt;&#x27;</span>).<span class="property">length</span> &gt; <span class="number">6</span>) &#123;
+        <span class="keyword">const</span> codeCopyDiv = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;div&#x27;</span>);
+        codeCopyDiv.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&#x27;CodeCloseDiv&#x27;</span>);
+        code.<span class="property">parentNode</span>.<span class="property">parentNode</span>.<span class="property">parentNode</span>.<span class="property">parentNode</span>.<span class="title function_">appendChild</span>(codeCopyDiv);
 
-        <span class="hljs-keyword">const</span> codeCopyOver = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;button&#x27;</span>);
-        codeCopyOver.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;CodeClose&#x27;</span>);
-        codeCopyOver.<span class="hljs-property">innerHTML</span> = openText;
+        <span class="keyword">const</span> codeCopyOver = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;button&#x27;</span>);
+        codeCopyOver.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&#x27;CodeClose&#x27;</span>);
+        codeCopyOver.<span class="property">innerHTML</span> = openText;
 
-        <span class="hljs-keyword">const</span> parent = code.<span class="hljs-property">parentNode</span>.<span class="hljs-property">parentNode</span>.<span class="hljs-property">parentNode</span>.<span class="hljs-property">parentNode</span>;
-        <span class="hljs-keyword">const</span> description = parent.<span class="hljs-property">childNodes</span>.<span class="hljs-property">length</span> === <span class="hljs-number">3</span> ? parent.<span class="hljs-property">children</span>[<span class="hljs-number">2</span>] : parent.<span class="hljs-property">children</span>[<span class="hljs-number">1</span>];
-        description.<span class="hljs-title function_">appendChild</span>(codeCopyOver);
+        <span class="keyword">const</span> parent = code.<span class="property">parentNode</span>.<span class="property">parentNode</span>.<span class="property">parentNode</span>.<span class="property">parentNode</span>;
+        <span class="keyword">const</span> description = parent.<span class="property">childNodes</span>.<span class="property">length</span> === <span class="number">3</span> ? parent.<span class="property">children</span>[<span class="number">2</span>] : parent.<span class="property">children</span>[<span class="number">1</span>];
+        description.<span class="title function_">appendChild</span>(codeCopyOver);
 
-        codeCopyOver.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;
-            <span class="hljs-keyword">if</span> (codeCopyOver.<span class="hljs-property">innerHTML</span> === openText) &#123;
-                <span class="hljs-keyword">const</span> scrollTop = <span class="hljs-variable language_">document</span>.<span class="hljs-property">documentElement</span>.<span class="hljs-property">scrollTop</span>;
-                <span class="hljs-keyword">const</span> codeHeight = code.<span class="hljs-property">clientHeight</span>;
+        codeCopyOver.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">() =&gt;</span> &#123;
+            <span class="keyword">if</span> (codeCopyOver.<span class="property">innerHTML</span> === openText) &#123;
+                <span class="keyword">const</span> scrollTop = <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">scrollTop</span>;
+                <span class="keyword">const</span> codeHeight = code.<span class="property">clientHeight</span>;
 
-                <span class="hljs-keyword">if</span> (scrollTop &lt; codeHeight) &#123;
-                    <span class="hljs-variable language_">document</span>.<span class="hljs-property">documentElement</span>.<span class="hljs-property">scrollTop</span> += codeHeight - scrollTop;
+                <span class="keyword">if</span> (scrollTop &lt; codeHeight) &#123;
+                    <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">scrollTop</span> += codeHeight - scrollTop;
                 &#125;
 
-                preCode.<span class="hljs-property">style</span>.<span class="hljs-property">webkitLineClamp</span> = <span class="hljs-string">&#x27;99999&#x27;</span>;
-                codeCopyOver.<span class="hljs-property">innerHTML</span> = closeText;
-            &#125; <span class="hljs-keyword">else</span> &#123;
-                preCode.<span class="hljs-property">style</span>.<span class="hljs-property">webkitLineClamp</span> = <span class="hljs-string">&#x27;6&#x27;</span>;
-                codeCopyOver.<span class="hljs-property">innerHTML</span> = openText;
+                preCode.<span class="property">style</span>.<span class="property">webkitLineClamp</span> = <span class="string">&#x27;99999&#x27;</span>;
+                codeCopyOver.<span class="property">innerHTML</span> = closeText;
+            &#125; <span class="keyword">else</span> &#123;
+                preCode.<span class="property">style</span>.<span class="property">webkitLineClamp</span> = <span class="string">&#x27;6&#x27;</span>;
+                codeCopyOver.<span class="property">innerHTML</span> = openText;
             &#125;
         &#125;);
     &#125;
 
-    <span class="hljs-comment">// 添加复制按钮</span>
-    <span class="hljs-keyword">const</span> codeCopyBtn = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;div&#x27;</span>);
-    codeCopyBtn.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;copy-btn&#x27;</span>);
-    codeCopyBtn.<span class="hljs-property">innerHTML</span> = copyText;
-    code.<span class="hljs-title function_">appendChild</span>(codeCopyBtn);
+    <span class="comment">// 添加复制按钮</span>
+    <span class="keyword">const</span> codeCopyBtn = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;div&#x27;</span>);
+    codeCopyBtn.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&#x27;copy-btn&#x27;</span>);
+    codeCopyBtn.<span class="property">innerHTML</span> = copyText;
+    code.<span class="title function_">appendChild</span>(codeCopyBtn);
 
-    <span class="hljs-comment">// 添加复制功能</span>
-    codeCopyBtn.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; &#123;
-        <span class="hljs-keyword">const</span> currentCodeElement = code.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;pre&#x27;</span>)?.<span class="hljs-property">innerText</span>;
-        <span class="hljs-keyword">await</span> <span class="hljs-title function_">copyCode</span>(currentCodeElement);
+    <span class="comment">// 添加复制功能</span>
+    codeCopyBtn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">async</span> () =&gt; &#123;
+        <span class="keyword">const</span> currentCodeElement = code.<span class="title function_">querySelector</span>(<span class="string">&#x27;pre&#x27;</span>)?.<span class="property">innerText</span>;
+        <span class="keyword">await</span> <span class="title function_">copyCode</span>(currentCodeElement);
 
-        codeCopyBtn.<span class="hljs-property">innerHTML</span> = copySuccess;
-        codeCopyBtn.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;success&#x27;</span>);
+        codeCopyBtn.<span class="property">innerHTML</span> = copySuccess;
+        codeCopyBtn.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&#x27;success&#x27;</span>);
 
-        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
-            codeCopyBtn.<span class="hljs-property">innerHTML</span> = copyText;
-            codeCopyBtn.<span class="hljs-property">classList</span>.<span class="hljs-title function_">remove</span>(<span class="hljs-string">&#x27;success&#x27;</span>);
-        &#125;, <span class="hljs-number">3000</span>);
+        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+            codeCopyBtn.<span class="property">innerHTML</span> = copyText;
+            codeCopyBtn.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&#x27;success&#x27;</span>);
+        &#125;, <span class="number">3000</span>);
     &#125;);
 &#125;);
 
-<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">copyCode</span>(<span class="hljs-params">currentCode</span>) &#123;
-    <span class="hljs-keyword">if</span> (navigator.<span class="hljs-property">clipboard</span>) &#123;
-        <span class="hljs-keyword">try</span> &#123;
-            <span class="hljs-keyword">await</span> navigator.<span class="hljs-property">clipboard</span>.<span class="hljs-title function_">writeText</span>(currentCode);
-        &#125; <span class="hljs-keyword">catch</span> (error) &#123;
-            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(error);
+<span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">copyCode</span>(<span class="params">currentCode</span>) &#123;
+    <span class="keyword">if</span> (navigator.<span class="property">clipboard</span>) &#123;
+        <span class="keyword">try</span> &#123;
+            <span class="keyword">await</span> navigator.<span class="property">clipboard</span>.<span class="title function_">writeText</span>(currentCode);
+        &#125; <span class="keyword">catch</span> (error) &#123;
+            <span class="variable language_">console</span>.<span class="title function_">error</span>(error);
         &#125;
-    &#125; <span class="hljs-keyword">else</span> &#123;
-        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;当前浏览器不支持此API&#x27;</span>);
+    &#125; <span class="keyword">else</span> &#123;
+        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;当前浏览器不支持此API&#x27;</span>);
     &#125;
 &#125;
 </code></pre>
