@@ -4550,7 +4550,7 @@ nav.menu a.nav-item:hover {
 }
 .toc-level-2::marker {
   content: '❄️';
-  color: rgba(233,151,156,0.361) !important;
+  color: #ae4103 !important;
 }
 .widget-wrapper.toc.single a.toc-link {
   position: relative;
