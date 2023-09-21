@@ -4523,24 +4523,24 @@ nav.menu a.nav-item:hover {
   list-style: '';
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link)::marker {
-  content: '❄️';
-  color: #97e255;
+  content: '🌸';
+  color: rgba(233,151,156,0.09);
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link:hover)::marker {
   content: '🌸';
-  color: rgba(233,151,156,0.1);
+  color: rgba(233,151,156,0.361);
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link.active)::marker {
-  content: '❄️' !important;
-  color: #40ccf1 !important;
+  content: '🌸' !important;
+  color: #f1404b !important;
 }
 .widget-wrapper.toc.single .toc-item.active {
   color: #fff;
   background: #f1404b;
   margin-top: 2px;
   margin-bottom: 2px;
-  -webkit-box-shadow: 0 8px 15px #f041c2;
-  box-shadow: 0 8px 15px #f041c2;
+  -webkit-box-shadow: 0 8px 15px #f04106;
+  box-shadow: 0 8px 15px #f04106;
 }
 .widget-wrapper.toc.single .toc-item .toc-child .toc-item {
   padding: 0;
@@ -4549,8 +4549,8 @@ nav.menu a.nav-item:hover {
   content: none;
 }
 .toc-level-2::marker {
-  content: '❄️';
-  color: #97dbff !important;
+  content: '🌸';
+  color: rgba(233,151,156,0.361) !important;
 }
 .widget-wrapper.toc.single a.toc-link {
   position: relative;
