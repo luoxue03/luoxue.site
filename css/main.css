@@ -4524,11 +4524,11 @@ nav.menu a.nav-item:hover {
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link)::marker {
   content: '❄️';
-  color: #00bcff;
+  color: rgba(0,188,255,0.62);
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link:hover)::marker {
-  content: '❄️';
-  color: #03a9ff;
+  content: '🌸';
+  color: rgba(233,30,99,0.639);
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link.active)::marker {
   content: '🌸' !important;
@@ -4549,8 +4549,8 @@ nav.menu a.nav-item:hover {
   content: none;
 }
 .toc-level-2::marker {
-  content: '🌸';
-  color: rgba(233,151,156,0.69) !important;
+  content: '❄️';
+  color: #03a9f4 !important;
 }
 .widget-wrapper.toc.single a.toc-link {
   position: relative;
