@@ -4524,7 +4524,7 @@ nav.menu a.nav-item:hover {
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link)::marker {
   content: '❄️';
-  color: rgba(0,188,255,0.62);
+  color: rgba(0,188,255,0.471);
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link:hover)::marker {
   content: '🌸';
