@@ -4532,11 +4532,11 @@ nav.menu a.nav-item:hover {
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link.active)::marker {
   content: '❄️' !important;
-  color: #f1404b !important;
+  color: #00e5ee !important;
 }
 .widget-wrapper.toc.single .toc-item.active {
   color: #fff;
-  background: #f1404b;
+  background: #00e5ee;
   margin-top: 2px;
   margin-bottom: 2px;
   -webkit-box-shadow: 0 8px 15px #f04106;
