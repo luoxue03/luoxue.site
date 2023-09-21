@@ -4523,15 +4523,15 @@ nav.menu a.nav-item:hover {
   list-style: '';
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link)::marker {
-  content: '🌸';
+  content: '❄️';
   color: rgba(233,151,156,0.09);
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link:hover)::marker {
-  content: '🌸';
+  content: '❄️';
   color: rgba(233,151,156,0.361);
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link.active)::marker {
-  content: '🌸' !important;
+  content: '❄️' !important;
   color: #f1404b !important;
 }
 .widget-wrapper.toc.single .toc-item.active {
@@ -4549,7 +4549,7 @@ nav.menu a.nav-item:hover {
   content: none;
 }
 .toc-level-2::marker {
-  content: '🌸';
+  content: '❄️';
   color: rgba(233,151,156,0.361) !important;
 }
 .widget-wrapper.toc.single a.toc-link {
@@ -5617,7 +5617,7 @@ img[fancybox='true'] {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 4px 1rem;
+  padding: 4px 1.4rem;
   opacity: 0;
   font-weight: 700;
   color: var(--theme);

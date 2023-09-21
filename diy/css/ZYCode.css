@@ -1,5 +1,5 @@
 :root {
-    --code-autor: '© 钟意博客🌙';
+    --code-autor: '© Luoxue❄️';
     --code-tip: "优雅借鉴";
 }
 
@@ -357,19 +357,19 @@ figcaption span {
 .highlight {
     position: relative;
 }
-/* 折叠
+
 .highlight .code .copy-btn {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 4px 0.5rem;
+    padding: 4px 1.4rem;
     opacity: 0.75;
     font-weight: 700;
     color: var(--theme);
     cursor: pointer;
     transination: opacity 0.3s;
 }
- */
+
 .highlight .code .copy-btn:hover {
     color: var(--text-code);
     opacity: 1;
@@ -422,7 +422,7 @@ code.hljs {
 
 /*代码标识前置*/
 td.code:before {
-    right: 25px !important;
+    right: 45px !important;
 }
 
 /*背景补偿*/
