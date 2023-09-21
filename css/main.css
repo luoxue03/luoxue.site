@@ -4524,11 +4524,11 @@ nav.menu a.nav-item:hover {
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link)::marker {
   content: '❄️';
-  color: #97e242;
+  color: #97e255;
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link:hover)::marker {
   content: '🌸';
-  color: rgba(233,151,156,0.7);
+  color: rgba(233,151,156,0.1);
 }
 .widget-wrapper.toc .toc-item:has(> a.toc-link.active)::marker {
   content: '❄️' !important;
@@ -4539,8 +4539,8 @@ nav.menu a.nav-item:hover {
   background: #f1404b;
   margin-top: 2px;
   margin-bottom: 2px;
-  -webkit-box-shadow: 0 8px 15px #f04106;
-  box-shadow: 0 8px 15px #f04106;
+  -webkit-box-shadow: 0 8px 15px #f041c2;
+  box-shadow: 0 8px 15px #f041c2;
 }
 .widget-wrapper.toc.single .toc-item .toc-child .toc-item {
   padding: 0;
@@ -4550,7 +4550,7 @@ nav.menu a.nav-item:hover {
 }
 .toc-level-2::marker {
   content: '❄️';
-  color: #97db11 !important;
+  color: #97dbff !important;
 }
 .widget-wrapper.toc.single a.toc-link {
   position: relative;
