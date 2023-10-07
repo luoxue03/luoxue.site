@@ -3,27 +3,27 @@ codeElementArr.forEach(code => {
   const codeBeforeWidth = window.getComputedStyle(code, '::before').width.split('px')[0]
   const codeBeforePadding = window.getComputedStyle(code, '::before').padding.split(' ').pop().split('px')[0]
 
-  // copy btn 
-//   const codeCopyBtn = document.createElement('div')
-//   codeCopyBtn.classList.add('copy-btn')
-//   codeCopyBtn.style.right = Number(codeBeforeWidth) + Number(codeBeforePadding) * 2 + 'px'
-//   codeCopyBtn.innerText = stellar.plugins.copycode.default_text
+  copy btn 
+  const codeCopyBtn = document.createElement('div')
+  codeCopyBtn.classList.add('copy-btn')
+  codeCopyBtn.style.right = Number(codeBeforeWidth) + Number(codeBeforePadding) * 2 + 'px'
+  codeCopyBtn.innerText = stellar.plugins.copycode.default_text
 
-//   code.appendChild(codeCopyBtn)
+  code.appendChild(codeCopyBtn)
 
-//   codeCopyBtn.addEventListener('click', async () => {
-//     const currentCodeElement = code.children[0]?.innerText
-//     await copyCode(currentCodeElement)
+  codeCopyBtn.addEventListener('click', async () => {
+    const currentCodeElement = code.children[0]?.innerText
+    await copyCode(currentCodeElement)
 
-//     codeCopyBtn.innerText = stellar.plugins.copycode.success_text
-//     codeCopyBtn.classList.add('success')
+    codeCopyBtn.innerText = stellar.plugins.copycode.success_text
+    codeCopyBtn.classList.add('success')
 
-//     setTimeout(() => {
-//       codeCopyBtn.innerText = stellar.plugins.copycode.default_text
-//       codeCopyBtn.classList.remove('success')
-//     },3000)
-//   })
-// })
+    setTimeout(() => {
+      codeCopyBtn.innerText = stellar.plugins.copycode.default_text
+      codeCopyBtn.classList.remove('success')
+    },3000)
+  })
+})
 
 async function copyCode(currentCode) {
   // console.log(currentCode)
