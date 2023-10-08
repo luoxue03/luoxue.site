@@ -92,6 +92,9 @@
     background-position: 0% 50%;
   }
 }
+.custom-font {
+  font-family: "Kosugi Maru", sans-serif; /* 这里指定了你想要的字体 */
+}
 div#swiper_container {
   background: var(--card);
   z-index: auto;
