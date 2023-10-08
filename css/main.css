@@ -95,7 +95,7 @@
 .custom-font {
   font-family: 'Zfont', sans-serif !important /* 这里指定了你想要的字体 */;
 }
-#he-plugin-simple[data-v-41ba7e2c] {
+#he-plugin-simple {
   font-family: 'Zfont' !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
