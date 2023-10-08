@@ -110,25 +110,17 @@
 
 
 
-<script>
-// 获取JSON数据
-fetch('https://www.ipip5.com/today/api.php?type=json')
-  .then(response => response.json())
-  .then(data => {
-
-    // 获取输出元素
-    const output = document.querySelector('#thistoday');
-
-    // 遍历结果并拼接文本
-    let text = '';
-    data.result.forEach(item => {
-      text += `在${item.year}发生了${item.title}\n`;
-    });
-
-    // 设置文本内容
-    output.textContent = text;
-
-  });
+  <script>
+  fetch('https://www.ipip5.com/today/api.php?type=json',mode: 'no-cors')  
+  .then(response => response.json())  
+  .then(data => {  
+      let output = '';  
+      data.result.forEach(item => {  
+          output += `在${item.year}发生了${item.title}。`;  
+      });  
+      document.getElementById('thistoday').innerText = output;  
+  })  
+  .catch(error => console.error('Error:', error));
 </script>
 
 <widget class="widget-wrapper markdown"><div class="widget-header cap theme dis-select"><span class="name">欢迎欢迎</span></div><div class="widget-body fs14"><p id="hitokoto"> <a href="#" id="hitokoto_text">:D 获取中...</a> </p>
