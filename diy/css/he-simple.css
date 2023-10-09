@@ -35,17 +35,23 @@
     display: table;
     width: 100%;
     height: 100%;
-    text-align: center
+    text-align: left
 }
 
 .s-sticker div[data-v-41ba7e2c] {
     display: table-cell;
     vertical-align: middle;
-    white-space: nowrap
+    white-space: nowrap;
+    border: 0; /* 设置边框为0 */  
+    width: 0; /* 设置宽度为0 */  
+    height: 0; /* 设置高度为0 */  
+    padding: 0; /* 设置内边距为0 */  
+    margin: 0; /* 设置外边距为0 */  
+    text-align: left; /* 设置文本左对齐 */
 }
 
 .s-sticker div[data-v-41ba7e2c]:not(:first-child):not(:last-child) {
-    padding: 0 .2em
+    padding: 0 .0em
 }
 
 .s-sticker div[data-v-41ba7e2c]:first-child {
