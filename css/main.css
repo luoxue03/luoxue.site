@@ -92,19 +92,6 @@
     background-position: 0% 50%;
   }
 }
-.custom-font {
-  font-family: 'Zfont', sans-serif !important /* 这里指定了你想要的字体 */;
-}
-#he-plugin-simple {
-  font-family: 'Zfont' !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
-  border-radius: 0.4em;
-  font-size: 10px;
-  position: relative;
-}
 div#swiper_container {
   background: var(--card);
   z-index: auto;
