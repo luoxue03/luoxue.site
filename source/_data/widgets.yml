@@ -2,4 +2,9 @@ welcome:
   layout: markdown
   title: 欢迎欢迎
   content: |
-    <p id="hitokoto"> </p>
+    <p id="hitokoto"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
+weather:
+  layout: markdown
+  title: 今日天气🌦️
+  content: |
+    <div><p id="he-plugin-simple"><a> 🌦️获取今日天气中...</a></p>❄️</div>

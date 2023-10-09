@@ -1,0 +1,7 @@
+# robots.txt generated at httptool.chinaz.comrobots 
+User-agent 
+Disallow 
+Disallow js
+Disallow css
+Sitemap httpswww.luoxue.sitebaidusitemap.xml
+Sitemap httpswww.luoxue.sitesitemap.xml

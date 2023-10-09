@@ -20,7 +20,7 @@ language:
 timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://vercel.luoxue.site
+url: https://www.luoxue.site
 permalink: :title.html
 permalink_defaults:
 pretty_urls:
@@ -118,14 +118,44 @@ inject:
     </script>
   - <link rel="stylesheet" href="/diy/css/ZYDark.css"> # 黑夜样式
   - <link rel="stylesheet" href="/diy/css/ZYCode.css"> 
+  - <link href="https://cdn.jsdelivr.net/npm/qweather-icons@1.5.0/font/qweather-icons.css" rel="stylesheet">
   script:
   - <script type="text/javascript" src="/diy/js/ZYDark.js"></script> # 黑夜控制
   - <script type="text/javascript" src="/diy/js/ZYCode.js"></script> # 代码复制、折叠
   - <script src="https://kit.fontawesome.com/06b2d5b226.js" crossorigin="anonymous"></script>
+baidu_url_submit:
+  count: 100 # 提交最新的一个链接
+  host: www.luoxue.site # 在百度站长平台中注册的域名
+  token: faNTH3SRkkskqViX # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
+
+# hexo-neat
+# md博文压缩
+neat_enable: true
+# 压缩html（ejs，swig等也属于html格式片段）
+neat_html:
+  enable: true
+  exclude:
+# 压缩css  
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true #打印日志
+  output:
+  compress:
+  exclude: #排除文件
+    - '*.min.js'
+    - '**/*.min.js'
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
+- type: 'git'
   repository: git@github.com:luoxue03/luoxue.site.git
   branch: main
   message: "Build at {{ now('yyyy-MM-DD HH:mm:ss Z') }}"
+- type: baidu_url_submitter
