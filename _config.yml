@@ -118,17 +118,19 @@ inject:
     </script>
   - <link rel="stylesheet" href="/diy/css/ZYDark.css"> # 黑夜样式
   - <link rel="stylesheet" href="/diy/css/ZYCode.css"> 
-  - <link href="https://cdn.jsdelivr.net/npm/qweather-icons@1.5.0/font/qweather-icons.css" rel="stylesheet">
   script:
   - <script type="text/javascript" src="/diy/js/ZYDark.js"></script> # 黑夜控制
   - <script type="text/javascript" src="/diy/js/ZYCode.js"></script> # 代码复制、折叠
   - <script src="https://kit.fontawesome.com/06b2d5b226.js" crossorigin="anonymous"></script>
+### 百度提交 ###
 baidu_url_submit:
   count: 100 # 提交最新的一个链接
   host: www.luoxue.site # 在百度站长平台中注册的域名
   token: faNTH3SRkkskqViX # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
-
+### 播放器 ###
+aplayer:
+  meting: true
 # hexo-neat
 # md博文压缩
 neat_enable: true
