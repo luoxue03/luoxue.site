@@ -3,8 +3,17 @@ welcome:
   title: 欢迎欢迎
   content: |
     <p id="hitokoto"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
+    <p id="hitokoto_from" style="font-size: 11px !important; float: right; text-align: left;"><a href="#" id="hitokoto_text">🏞️获取中...</a></p>
+    <p id="hitokoto_who" style="font-size: 11px!important;float: right;"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
 weather:
   layout: markdown
   title: 今日天气🌦️
   content: |
     <div><p id="he-plugin-simple"><a> 🌦️获取今日天气中...</a></p>❄️</div>
+Comments:
+  layout: markdown
+  title: 最近评论
+  content: |
+    <div id="waline-recent"></div>
+    <div id="waline-users"></div>
+    <div id="waline-wall"></div>

@@ -128,9 +128,6 @@ baidu_url_submit:
   host: www.luoxue.site # 在百度站长平台中注册的域名
   token: faNTH3SRkkskqViX # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
-### 播放器 ###
-aplayer:
-  meting: true
 # hexo-neat
 # md博文压缩
 neat_enable: true
@@ -144,6 +141,8 @@ neat_css:
   exclude:
     - '*.min.css'
     - '**/*.min.css'
+    - 'diy/ZYCode.css'
+    - 'diy/ZYDark.css'
 # 压缩js
 neat_js:
   enable: true
@@ -153,6 +152,8 @@ neat_js:
   exclude: #排除文件
     - '*.min.js'
     - '**/*.min.js'
+    - 'diy/ZYCode.js'
+    - 'diy/ZYDark.js'
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
