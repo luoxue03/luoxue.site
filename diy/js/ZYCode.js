@@ -1,4 +1,4 @@
-// 这四个常量是复制,复制成功,展开,收缩
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>// 这四个常量是复制,复制成功,展开,收缩
 // 我使用的是 https://fontawesome.com/ 图标, 不用可以改为文字.
 const copyText = '<i class="fa-regular fa-copy"  style="color: #aa69ec;"></i>';
 const copySuccess = '<i class="fa-regular fa-circle-check"  style="color: limegreen;"></i>';
