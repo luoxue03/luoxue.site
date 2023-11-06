@@ -1,8 +1,8 @@
 ---
 title: Hello World
 pin: true
-swiper_thumbnail: https://img1.baidu.com/it/u=2331294293,2690342395&fm=253&fmt=auto&app=138&f=PNG?w=567&h=294
-tag: test 
+swiper_thumbnail: https://cdn.jsdelivr.net/gh/luoxue03/ImagesHost/PIC/slava-auchynnikau-2CNVPonHhVA-unsplash.jpg
+tag: test
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
@@ -14,7 +14,7 @@ swiper_thumbnail: https://img1.baidu.com/it/u=2331294293,2690342395&fm=253&fmt=a
 ``` bash
 $ hexo new "My New Post"
 ```
-创建一个新的文章
+
 More info: [Writing](https://hexo.io/docs/writing.html)
 
 ### Run server

@@ -1,3 +1,19 @@
+---
+title: GP6.22 IPV6部署
+categories:
+  - - Diary
+    - PlayStation
+  - - Diary
+    - Games
+  - - Life
+date: 2023-11-3 11:25:46
+tags:
+description:
+output: word_document
+---
+<!-- 手动摘要 -->
+简单部署GP6.22的IPV6方式。
+<!-- more -->
 # GP6.22 IPV6部署
 
 1. 解压安装GP软件包
