@@ -154,11 +154,11 @@ codeElements.forEach(async (code, index) => {
         return `${size.toFixed(2)} ${units[unitIndex]}`;
     }
     // 添加figure的after伪类
-    figure.setAttribute('code-info',`📟 ${formatFileSize(blob.size)}   © 钟意博客🌙`)
+    figure.setAttribute('code-info',`📟 ${formatFileSize(blob.size)}   © luoxue❄️`)
 
     codeDownBtn.addEventListener('click', () => {
         const figcaption = figure.firstElementChild
-        const figcaptionText = figcaption.tagName === 'FIGCAPTION' ? figcaption.innerText : '钟意博客';
+        const figcaptionText = figcaption.tagName === 'FIGCAPTION' ? figcaption.innerText : 'luoxue';
         const fileNamePattern = /^[^\/\\]+\.\w+$/;
         const fileName =  fileNamePattern.test(figcaptionText) ? figcaptionText : `${figcaptionText}.txt`;
         // const suffix = window.getComputedStyle(code, ':before').getPropertyValue('content');
