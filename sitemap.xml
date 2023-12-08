@@ -65,14 +65,14 @@
 
   
   <url>
-    <loc>https://www.luoxue.site/tags/test/</loc>
+    <loc>https://www.luoxue.site/tags/stellar/</loc>
     <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.luoxue.site/tags/stellar/</loc>
+    <loc>https://www.luoxue.site/tags/test/</loc>
     <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -82,6 +82,13 @@
   
   <url>
     <loc>https://www.luoxue.site/categories/diary/</loc>
+    <lastmod>2023-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luoxue.site/categories/linux/</loc>
     <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -102,6 +109,13 @@
   </url>
   
   <url>
+    <loc>https://www.luoxue.site/categories/linux/command/</loc>
+    <lastmod>2023-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.luoxue.site/categories/diary/games/</loc>
     <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -110,20 +124,6 @@
   
   <url>
     <loc>https://www.luoxue.site/categories/life/</loc>
-    <lastmod>2023-12-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue.site/categories/linux/</loc>
-    <lastmod>2023-12-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue.site/categories/linux/command/</loc>
     <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
