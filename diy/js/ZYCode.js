@@ -2,7 +2,7 @@
 // 我使用的是 https://fontawesome.com/ 图标, 不用可以改为文字.
 const copyText = '<i class="fa-regular fa-copy"></i>';
 const copySuccess = '<i class="fa-regular fa-circle-check"></i>';
-const openText = '<i class="fa-solid fa-angles-down fa-beat-fade"></i>';
+const openText = '1';
 const closeText = '<i class="fa-solid fa-angles-up fa-beat-fade"></i>';
 const fullOpen = '<i class="fa-solid fa-expand"></i>'
 const fullClose = '<i class="fa-solid fa-compress"></i>'
