@@ -1,14 +1,28 @@
 // 这四个常量是复制,复制成功,展开,收缩
 // 我使用的是 https://fontawesome.com/ 图标, 不用可以改为文字.
+
 const copyText = '<i class="fa-regular fa-copy"></i>';
+
 const copySuccess = '<i class="fa-regular fa-circle-check"></i>';
-// const openText = '<i class="fa-solid fa-angles-down fa-beat-fade"></i>';
-const openText = 打开;
-// const closeText = '<i class="fa-solid fa-angles-up fa-beat-fade"></i>';
-const closeText = 关闭;
+
+const openText = '<i class="fa-solid fa-angles-down fa-beat-fade"></i>';
+
+const closeText = '<i class="fa-solid fa-angles-up fa-beat-fade"></i>';
+
 const fullOpen = '<i class="fa-solid fa-expand"></i>'
+
 const fullClose = '<i class="fa-solid fa-compress"></i>'
-const downTest = '<i class="fa-solid fa-download"></i>'
+
+const downTest = '<i class="fa-solid fa-download"></i>'const copyText = '6';
+
+// const copySuccess = '7';
+// const openText = '打开';
+// const closeText = '关闭';
+// const fullOpen = '4'
+// const fullClose = '3'
+// const downTest = '2'
+
+
 
 const codeElements = document.querySelectorAll('td.code');
 
