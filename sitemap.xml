@@ -88,13 +88,6 @@
   </url>
   
   <url>
-    <loc>https://www.luoxue.site/categories/linux/</loc>
-    <lastmod>2023-12-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.luoxue.site/categories/%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD/</loc>
     <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -109,7 +102,7 @@
   </url>
   
   <url>
-    <loc>https://www.luoxue.site/categories/linux/command/</loc>
+    <loc>https://www.luoxue.site/categories/linux/</loc>
     <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -117,6 +110,13 @@
   
   <url>
     <loc>https://www.luoxue.site/categories/diary/games/</loc>
+    <lastmod>2023-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luoxue.site/categories/linux/command/</loc>
     <lastmod>2023-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
