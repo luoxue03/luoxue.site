@@ -1,5 +1,5 @@
 :root {
-    --code-autor: '© Luoxue❄️';
+    --code-autor: '© Luoxue';
     --code-tip: "优雅借鉴";
 }
 
@@ -16,7 +16,7 @@
 }
 
 .hljs::before {
-    content: var(--code-tip);
+    content: attr(code-msg);
     position: absolute;
     left: 15px;
     top: 10px;
@@ -326,6 +326,12 @@ td.hljs-ln-line.hljs-ln-numbers {
 .md-text pre > .hljs {
     padding-top: 2rem !important;
 }
+.md-text .highlight .gutter {
+    display: block !important;
+    padding-top: 2rem !important;
+    max-height: calc(9 * 1rem) !important;
+    overflow: hidden;
+}
 
 .md-text pre {
     padding: 0 !important;
@@ -337,14 +343,27 @@ code {
     background-position: 50% !important;
 }
 
+*/
 figure::after {
-    content: var(--code-autor);
+    /*  设置内容为code-info属性 */
+    content: attr(code-info);
+    /*  设置文本对齐方式为右对齐 */
     text-align: right;
-    font-size: 10px;
+    /*  设置字体大小为10px */
+    font-size: 12px;
+    /*  设置字体粗细为粗体 */
+    font-weight: bold;
+    /*  设置字体为等宽字体 */
+    /* font-family: monospace; */
+    /*  设置浮动方式为右浮动 */
     float: right;
+    /*  设置外边距为3px */
     margin-top: 3px;
+    /*  设置右边距为15px */
     padding-right: 15px;
+    /*  设置下边距为8px */
     padding-bottom: 8px;
+    /*  设置颜色为#999 */
     color: #999
 }
 
@@ -352,17 +371,15 @@ figcaption span {
     border-radius: 0px 0px 12px 12px !important;
 }
 
-
-/* 复制代码按钮 */
+/* 以下为功能按钮 */
 .highlight {
     position: relative;
 }
 
-.highlight .code .copy-btn {
+.highlight .code .more-btn {
     position: absolute;
     top: 0;
-    right: 0;
-    padding: 4px 1.4rem;
+    padding: 4px 0.5rem;
     opacity: 0.75;
     font-weight: 700;
     color: var(--theme);
@@ -370,14 +387,36 @@ figcaption span {
     transination: opacity 0.3s;
 }
 
-.highlight .code .copy-btn:hover {
-    color: var(--text-code);
-    opacity: 1;
+/* 复制代码按钮 */
+.highlight .code .copy-btn {
+    color: #aa69ec;
+    right: 0;
 }
 
 .highlight .code .copy-btn.success {
-    color: var(--swiper-theme-color);
+    color: #3DC550 !important;
     opacity: 0.75;
+}
+
+/* 全屏代码按钮 */
+.highlight .code .full-btn {
+    color: #d34141;
+    right: 25px;
+}
+
+/* 下载代码按钮 */
+.highlight .code .down-btn {
+    color: #4368a8;
+    right: 50px;
+}
+.highlight .code .down-btn.success {
+    color: #3DC550 !important;
+}
+
+/* 按钮悬浮样式 */
+.highlight .code .more-btn:hover {
+    /*color: var(--text-code);*/
+    opacity: 1;
 }
 
 /* 描述 */
@@ -422,7 +461,7 @@ code.hljs {
 
 /*代码标识前置*/
 td.code:before {
-    right: 45px !important;
+    right: 75px !important;
 }
 
 /*背景补偿*/
@@ -441,4 +480,7 @@ td.code:before {
     color: #EDB65B;
     font-weight: bolder;
     transition: 0.6s;
+}
+#start > div > article > figure.highlight > figcaption > span {
+    margin-left: 3em;
 }
