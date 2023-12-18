@@ -2,8 +2,8 @@
 // 我使用的是 https://fontawesome.com/ 图标, 不用可以改为文字.
 const copyText = '<i class="fa-regular fa-copy"></i>';
 const copySuccess = '<i class="fa-regular fa-circle-check"></i>';
-const openText = '<i class="fa-solid fa-angles-down fa-beat-fade"></i>';
-const closeText = '<i class="fa-solid fa-angles-up fa-beat-fade"></i>';
+const openText = '<i class="fa-solid fa-angles-down fa-beat-fade" aria-hidden="true"></i>';
+const closeText = '<i class="fa-solid fa-angles-up fa-beat-fade" aria-hidden="true"></i>';
 const fullOpen = '<i class="fa-solid fa-expand"></i>'
 const fullClose = '<i class="fa-solid fa-compress"></i>'
 const downTest = '<i class="fa-solid fa-download"></i>'
@@ -18,7 +18,7 @@ codeElements.forEach(async (code, index) => {
     preCode.id = `ZYCode${index + 1}`;  // 设置id，未来用
     preCode.style.webkitLineClamp = '6';
     // 修改code标签的before伪类
-    const setPreCodeBefore = (msg = '优雅借鉴') => {
+    const setPreCodeBefore = (msg = '复制') => {
         preCode.setAttribute('code-msg',msg)
     }
     setPreCodeBefore()
@@ -69,7 +69,7 @@ codeElements.forEach(async (code, index) => {
 
         codeCopyBtn.innerHTML = copySuccess;
         codeCopyBtn.classList.add('success');
-        setPreCodeBefore('借鉴成功，Ctrl+V 查收')
+        setPreCodeBefore('复制成功')
 
         setTimeout(() => {
             codeCopyBtn.innerHTML = copyText;
@@ -154,11 +154,11 @@ codeElements.forEach(async (code, index) => {
         return `${size.toFixed(2)} ${units[unitIndex]}`;
     }
     // 添加figure的after伪类
-    figure.setAttribute('code-info',`📟 ${formatFileSize(blob.size)}   © 钟意博客🌙`)
+    figure.setAttribute('code-info',`📟 ${formatFileSize(blob.size)}   ©Luoxue❄️`)
 
     codeDownBtn.addEventListener('click', () => {
         const figcaption = figure.firstElementChild
-        const figcaptionText = figcaption.tagName === 'FIGCAPTION' ? figcaption.innerText : '钟意博客';
+        const figcaptionText = figcaption.tagName === 'FIGCAPTION' ? figcaption.innerText : '©Luoxue❄️';
         const fileNamePattern = /^[^\/\\]+\.\w+$/;
         const fileName =  fileNamePattern.test(figcaptionText) ? figcaptionText : `${figcaptionText}.txt`;
         // const suffix = window.getComputedStyle(code, ':before').getPropertyValue('content');
