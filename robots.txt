@@ -3,5 +3,5 @@ User-agent
 Disallow 
 Disallow js
 Disallow css
-Sitemap httpswww.luoxue.sitebaidusitemap.xml
-Sitemap httpswww.luoxue.sitesitemap.xml
+Sitemap httpswww.luoxue03.cnbaidusitemap.xml
+Sitemap httpswww.luoxue03.cnsitemap.xml
