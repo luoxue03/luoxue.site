@@ -126,7 +126,7 @@ const init = {
               highlightItem.addClass("active")
               const e0 = document.querySelector('.widgets')
               const e1 = document.querySelector('#data-toc a.toc-link[href="' + encodeURI(link) + '"]')
-              const offsetBottom = e1.getBoundingClientRect().bottom - e0.getBoundingClientRect().bottom + 200
+              const offsetBottom = e1.getBoundingClientRect().bottom - e0.getBoundingClientRect().bottom + 100
               const offsetTop = e1.getBoundingClientRect().top - e0.getBoundingClientRect().top - 64
               if (offsetTop < 0) {
                 e0.scrollBy(0, offsetTop)
@@ -245,7 +245,7 @@ if (stellar.plugins.stellar) {
       if (els != undefined && els.length > 0) {
         stellar.jQuery(() => {
           stellar.loadScript(js, { defer: true });
-          if (key == 'timeline' || 'memos') {
+          if (key == 'timeline') {
             stellar.loadScript(stellar.plugins.marked);
           }
         })
@@ -327,35 +327,13 @@ if (stellar.plugins.preload) {
   }
 }
 
-function loadFancybox() {
-  stellar.loadCSS(stellar.plugins.fancybox.css);
-  stellar.loadScript(stellar.plugins.fancybox.js, { defer: true }).then(function () {
-    Fancybox.bind(selector, {
-      groupAll: true,
-      hideScrollbar: false,
-      Thumbs: {
-        autoStart: false,
-      },
-      caption: function (fancybox, carousel, slide) {
-        return slide.$trigger.alt || null
-      }
-    });
-  })
-}
 // fancybox
 if (stellar.plugins.fancybox) {
   let selector = 'img[fancybox]:not(.error)';
   if (stellar.plugins.fancybox.selector) {
     selector += `, ${stellar.plugins.fancybox.selector}`
   }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const els = document.getElementsByClassName('stellar-memos-api');
-    if (els != undefined && els.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
+  if (document.querySelectorAll(selector).length !== 0) {
     stellar.loadCSS(stellar.plugins.fancybox.css);
     stellar.loadScript(stellar.plugins.fancybox.js, { defer: true }).then(function () {
       Fancybox.bind(selector, {
