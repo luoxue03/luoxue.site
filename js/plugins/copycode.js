@@ -6,7 +6,6 @@ codeElementArr.forEach(code => {
   copy btn 
   const codeCopyBtn = document.createElement('div')
   codeCopyBtn.classList.add('copy-btn')
-  codeCopyBtn.style.right = Number(codeBeforeWidth) + Number(codeBeforePadding) * 2 + 'px'
   codeCopyBtn.innerText = stellar.plugins.copycode.default_text
 
   code.appendChild(codeCopyBtn)
@@ -26,12 +25,10 @@ codeElementArr.forEach(code => {
 })
 
 async function copyCode(currentCode) {
-  // console.log(currentCode)
-  // console.log('复制代码')
   if (navigator.clipboard) {
     try {
       await navigator.clipboard.writeText(currentCode)
-      } catch (error) {
+    } catch (error) {
       // 未获得用户许可
       codeCopyBtn.innerText = '未获得用户许可'
       codeCopyBtn.classList.add('warning')
