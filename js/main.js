@@ -254,46 +254,18 @@ if (stellar.plugins.stellar) {
   }
 }
 
-// ------------------- start 首页置顶文章轮播  新增
+// swiper
 if (stellar.plugins.swiper) {
-  const swiper_container = document.getElementById('swiper_container');
-  if (swiper_container !== undefined && swiper_container !== null) {
-    stellar.loadCSS(stellar.plugins.customSwiperTopArticle.css);
-    stellar.loadScript(stellar.plugins.customSwiperTopArticle.js, { defer: true }).then(function () {
-      var swiper = new Swiper('.blog-slider', {
-        passiveListeners: true,
-        spaceBetween: 30,
-        effect: 'fade',
-        loop: true,
-        autoplay: {
-          disableOnInteraction: true,
-          delay: 3000
-        },
-        mousewheel: false,
-        // autoHeight: true,
-        pagination: {
-          el: '.blog-slider__pagination',
-          clickable: true,
-        }
-      });
-      swiper_container.onmouseenter = function () {
-        swiper.autoplay.stop();
-      };
-      swiper_container.onmouseleave = function () {
-        swiper.autoplay.start();
-      }
-    });
-  }
-  // ------------------- end 首页置顶文章轮播  新增
-  // swiper
   const swiper_api = document.getElementById('swiper-api');
-  if (swiper_api !== undefined) {
+  if (swiper_api != undefined) {
     stellar.loadCSS(stellar.plugins.swiper.css);
     stellar.loadScript(stellar.plugins.swiper.js, { defer: true }).then(function () {
-      var swiper = new Swiper('.swiper-container', {
+      const effect = swiper_api.getAttribute('effect') || '';
+      var swiper = new Swiper('.swiper#swiper-api', {
         slidesPerView: 'auto',
         spaceBetween: 8,
         centeredSlides: true,
+        effect: effect,
         loop: true,
         pagination: {
           el: '.swiper-pagination',
@@ -382,7 +354,7 @@ if (stellar.search.service) {
           return;
         }
         var $resultArea = document.querySelector("div#search-result");
-        $inputArea.focus(function () {
+        $inputArea.focus(function() {
           var path = stellar.search[stellar.search.service]?.path || '/search.json';
           if (path.startsWith('/')) {
             path = path.substring(1);
@@ -391,12 +363,12 @@ if (stellar.search.service) {
           const filter = $inputArea.attr('data-filter') || '';
           searchFunc(path, filter, 'search-input', 'search-result');
         });
-        $inputArea.keydown(function (e) {
+        $inputArea.keydown(function(e) {
           if (e.which == 13) {
             e.preventDefault();
           }
         });
-        var observer = new MutationObserver(function (mutationsList, observer) {
+        var observer = new MutationObserver(function(mutationsList, observer) {
           if (mutationsList.length == 1) {
             if (mutationsList[0].addedNodes.length) {
               $('.search-wrapper').removeClass('noresult');
@@ -417,7 +389,7 @@ if (stellar.plugins.heti) {
   stellar.loadCSS(stellar.plugins.heti.css);
   stellar.loadScript(stellar.plugins.heti.js, { defer: true }).then(function () {
     const heti = new Heti('.heti');
-
+    
     // Copied from heti.autoSpacing() without DOMContentLoaded.
     // https://github.com/sivan/heti/blob/eadee6a3b748b3b7924a9e7d5b395d4bce479c9a/js/heti-addon.js
     //

@@ -1,9 +1,6 @@
 const codeElementArr = document.querySelectorAll('.code')
 codeElementArr.forEach(code => {
-  const codeBeforeWidth = window.getComputedStyle(code, '::before').width.split('px')[0]
-  const codeBeforePadding = window.getComputedStyle(code, '::before').padding.split(' ').pop().split('px')[0]
-
-  copy btn 
+  // copy btn 
   const codeCopyBtn = document.createElement('div')
   codeCopyBtn.classList.add('copy-btn')
   codeCopyBtn.innerText = stellar.plugins.copycode.default_text
