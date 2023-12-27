@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.luoxue03.cn/dameng-single.html</loc>
+    
+    <lastmod>2023-12-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.luoxue03.cn/iptables6.html</loc>
     
     <lastmod>2023-12-22</lastmod>
@@ -58,29 +67,29 @@
 
   <url>
     <loc>https://www.luoxue03.cn/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://www.luoxue03.cn/tags/linux/</loc>
+    <lastmod>2023-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luoxue03.cn/tags/%E8%BE%BE%E6%A2%A6%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2023-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.luoxue03.cn/tags/test/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue03.cn/tags/stellar/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue03.cn/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -88,57 +97,15 @@
 
   
   <url>
-    <loc>https://www.luoxue03.cn/categories/diary/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue03.cn/categories/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue03.cn/categories/diary/playstation/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.luoxue03.cn/categories/linux/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.luoxue03.cn/categories/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/stellar/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue03.cn/categories/diary/games/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue03.cn/categories/linux/command/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luoxue03.cn/categories/life/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <loc>https://www.luoxue03.cn/categories/linux/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
