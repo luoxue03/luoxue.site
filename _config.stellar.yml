@@ -1,0 +1,33 @@
+style:
+  font-family:
+    body: '"Zfont","Kosugi Maru","LXGW WenKai Screen",sans-serif'
+    logo: '"Kosugi Maru",sans-serif'
+    code: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+    codeblock: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+  darkmode: false # auto / always / false
+  codeblock:
+    highlightjs_theme: /custom/css/ZYCode.css
+  # footer:
+  #   social:
+      # github:
+      #   icon: '<img src="https://upyun.thatcdn.cn/public/img/icon/github-logo2.png"/>'
+      #   url: https://github.com/ThatCoders
+      # music:
+      #   icon: '<img src="https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png"/>'
+      #   url: https://music.163.com/#/user/home?id=134968139
+      # bili:
+      #   icon: '<img src="https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png"/>'
+      #   url: https://space.bilibili.com/1664687779
+      # card:
+      #   icon: '<img src="https://upyun.thatcdn.cn/public/img/icon/weChat.png"/>'
+      #   url: https://muselink.cc/naive
+      # Moon:
+      #   icon: '<img id="ThemeM" src="https://upyun.thatcdn.cn/public/img/icon/Moon.png"/>'
+      #   url: javaScript:void('永夜');
+      # Sun:
+      #   icon: '<img id="ThemeL" src="https://upyun.thatcdn.cn/public/img/icon/Sun.png"/>'
+      #   url: javaScript:void('永昼');
+      # AI:
+      #   icon: '<img id="ThemeAI" src="https://upyun.thatcdn.cn/public/img/icon/AI.png"/>'
+      #   url: javaScript:void('跟随系统');
+

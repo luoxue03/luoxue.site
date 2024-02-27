@@ -1,0 +1,147 @@
+<%
+function layoutDiv() {
+  if (!item.content?.length && !item.src?.length) return ''
+  var el = '';
+  el += `<widget class="widget-wrapper${scrollreveal(' ')} markdown">`
+  if (item.title?.length > 0) {
+    el += '<div class="widget-header dis-select">';
+    el += '<span class="name">' + item.title + '</span>';
+    el += '</div>';
+  }
+  el += '<div class="widget-body fs14">';
+  if (item.content) {
+    el += markdown(item.content);
+  }
+  if (item.src) {
+    el += `<div class="ds-mdrender" src="${item.src}"></div>`
+  }
+  if (item.linklist) {
+    el += partial('components/linklist', {item: item.linklist})
+  }
+  el += '</div>';
+  el += '</widget>';
+  return el;
+}
+%>
+<% if (theme.sidebar.widgets.hitokoto.enable) { %>
+  <script>
+  fetch('https://international.v1.hitokoto.cn/?encode=json')
+    .then(response => response.json())
+    .then(data => {
+      let hitokoto = data.hitokoto; // 数据：肠已断，泪难收。相思重上小红楼。
+      let from = data.from;
+      let fromWho = data.from_who;
+      from = `《${from}》`; // 在 from 变量前后添加“《”和“》”字符
+      // console.log(from); // 输出：鹧鸪天·晚日寒鸦一片愁
+      // console.log(fromWho); // 输出：辛弃疾
+      // console.log(hitokoto);
+      // 更新 #hitokoto 元素的内容
+      let hitokotoDom = document.querySelector('#hitokoto');
+      if (hitokotoDom) {
+        hitokotoDom.innerText = hitokoto;
+      }
+      // 更新 #hitokoto_from 元素的内容
+      let fromDom = document.querySelector('#hitokoto_from');
+      if (fromDom) {
+        fromDom.innerText = from;
+      }
+      // 更新 #hitokoto_who 元素的内容
+      let fromWhoDom = document.querySelector('#hitokoto_who');
+      if (fromWhoDom) {
+        fromWhoDom.innerText = fromWho;
+      }
+    })
+    .catch(error => console.error('Error:', error));
+  </script>
+<% } %>
+
+<% if (theme.sidebar.widgets.weather.enable) { %>
+  <script>
+    fetch('http://localhost:3000/tianqi')
+      .then(response => response.json())
+      .then(data => {
+        let city = data.city; // 数据：肠已断，泪难收。相思重上小红楼。
+        let date = data.info.date;
+        console.log(date);
+        let week = data.info.week;
+        let type = data.info.type;
+        let low = data.info.low;
+        let high = data.info.high;
+        let fengxiang = data.info.fengxiang;
+        let fengli = data.info.fengli;
+        let aqi_name = data.info.air.aqi_name;
+        let tip = data.info.tip;
+        // 获取要显示city内容的元素
+        const cityContentElement = document.getElementById('city-content');
+        cityContentElement.textContent = city;
+        // 获取要显示date内容的元素
+        const dateContentElement = document.getElementById('date-content');
+        dateContentElement.textContent = date;
+        // 获取要显示week内容的元素
+        const weekContentElement = document.getElementById('week-content');
+        weekContentElement.textContent = week;
+        // 获取要显示天气内容的元素
+        const weatherContentElement = document.getElementById('weather-content');
+        weatherContentElement.textContent = type;
+        // 获取要显示low内容的元素
+        const lowContentElement = document.getElementById('low-content');
+        lowContentElement.textContent = low;
+        // 获取要显示high内容的元素
+        const highContentElement = document.getElementById('high-content');
+        highContentElement.textContent = high;
+        // 获取要显示fengxiang内容的元素
+        const fengxiangContentElement = document.getElementById('fengxiang-content');
+        fengxiangContentElement.textContent = fengxiang;
+        // 获取要显示fengli内容的元素
+        const fengliContentElement = document.getElementById('fengli-content');
+        fengliContentElement.textContent = fengli;
+        // 获取要显示aqi_name内容的元素
+        const aqi_nameContentElement = document.getElementById('aqi-name-content');
+        aqi_nameContentElement.textContent = aqi_name;
+        // 获取要显示tip内容的元素
+        const tipContentElement = document.getElementById('tip-content');
+        tipContentElement.textContent = tip;
+      })
+      .catch(error => console.error('Error:', error));
+  </script>
+<% } %>
+<% if (theme.comments.waline.recentcomments) { %>
+  <script type="module">
+    import {
+      RecentComments
+    } from 'https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.mjs';
+    RecentComments({
+      el: '#waline-recent',
+      serverURL: 'https://waline.luoxue03.cn',
+      count: 10,
+    });
+  </script>
+  <% } %>
+<% if (theme.comments.waline.list) { %>
+  <script type="module">
+    import {
+      UserList
+    } from 'https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.mjs';
+    UserList({
+      el: '#waline-users',
+      serverURL: 'https://waline.luoxue03.cn',
+      count: 10,
+      mode: 'list'
+    });
+  </script>
+<% } %>
+
+<% if (theme.comments.waline.wall) { %>
+  <script type="module">
+    import {
+      UserList
+    } from 'https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.mjs';
+    UserList({
+      el: '#waline-wall',
+      serverURL: 'https://waline.luoxue03.cn',
+      count: 50,
+      mode: 'wall',
+    });
+  </script>
+<% } %>
+<%- layoutDiv() %>

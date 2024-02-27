@@ -1,0 +1,38 @@
+welcome:
+  layout: markdown
+  title: 欢迎，博士：
+  content: |
+    <p id="hitokoto" style="font-size: 14px !important;color: #5b9ff5;"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
+    <p id="hitokoto_who" style="font-size: 12px!important;color: #6f6dd9;display: inline-block; text-align: right;font-style: italic;"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
+    <p id="hitokoto_from" style="font-size: 12px !important;color: #cf9d9f; display: inline-block; text-align: left; margin-right: 10px;font-style: italic;"><a href="#" id="hitokoto_text">🏞️获取中...</a></p>
+
+weather:
+  layout: markdown
+  title: |
+    今日天气🌦️：<p id="tip-content" style="display: inline-block;"></p>
+  content: |
+    <div>
+    <span style="color: #f07c82;font-weight: bold;" id="city-content"></span>&nbsp;&nbsp;<span id="date-content" style="color: #f07c82;"></span>&nbsp;<span style="color: #f07c82;"></span>&nbsp;<span id="week-content" style="color: #f07c82;"></span><span style="color: #DC9FB4;">：</span>
+    </div>
+
+    <span style="color: #93b5cf;" id="weather-content"></span>&nbsp;&nbsp;<span style="color: #96c6c9;" id="low-content"></span>&nbsp;&nbsp;<span style="color: #65b7c1;" id="high-content"></span>&nbsp;&nbsp;
+    <span style="color: #7caba9;" id="fengxiang-content"></span>&nbsp;&nbsp;<span style="color: #91e3be;" id="fengli-content"></span>&nbsp;&nbsp;<span style="color: #DC9FB4;" id="aqi-name-content"></span>
+
+
+waline-recent:
+  layout: markdown
+  title: 最近评论
+  content: |
+    <div id="waline-recent"></div>
+
+waline-users:
+  layout: markdown
+  title: 读者排行榜
+  content: |
+    <div id="waline-users"></div>
+
+waline-wall:
+  layout: markdown
+  title: 读者墙
+  content: |
+    <div id="waline-wall"></div>
