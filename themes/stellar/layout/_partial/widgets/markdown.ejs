@@ -54,7 +54,7 @@ function layoutDiv() {
     .catch(error => console.error('Error:', error));
   </script>
 <% } %>
-<% if (theme.sidebar.widgets.weather.enable) { %>
+<!-- <% if (theme.sidebar.widgets.weather.enable) { %>
   <script>
   // 使用 ifinfo.io 或其他类似服务来获取用户IP
   fetch('https://api.vvhan.com/api/getIpInfo')
@@ -114,9 +114,12 @@ function layoutDiv() {
           const tipContentElement = document.getElementById('tip-content');
           tipContentElement.textContent = tip;
         })
-    });
+    })
   </script>
-<% } %>
+<% } %> -->
+
+
+
 
 <% if (theme.comments.waline.recentcomments) { %>
   <script type="module">
