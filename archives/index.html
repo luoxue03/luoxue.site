@@ -82,15 +82,6 @@
           const tipContentElement = document.getElementById('tip-content');
           tipContentElement.textContent = tip;
         })
-        .catch(error => console.error('Error:', error));
-        })
-        .catch(error => {
-          // 处理错误
-          console.error('Error fetching weather data:', error);
-        })
-    .catch(error => {
-      // 处理获取IP地址时的错误
-      console.error('Error fetching IP address:', error);
     });</script><script type="module">import {
       RecentComments
     } from 'https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.mjs';
