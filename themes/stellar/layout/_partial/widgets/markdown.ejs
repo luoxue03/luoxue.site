@@ -54,19 +54,19 @@ function layoutDiv() {
     .catch(error => console.error('Error:', error));
   </script>
 <% } %>
-<!-- <% if (theme.sidebar.widgets.weather.enable) { %>
+<% if (theme.sidebar.widgets.weather.enable) { %>
   <script>
-  // 使用 ifinfo.io 或其他类似服务来获取用户IP
-  fetch('https://api.vvhan.com/api/getIpInfo')
-    .then(response => response.json())
-    .then(data => {
-      // 提取IP地址
-      const ipAddress = data.ip;
-      console.log(ipAddress);
-      // 构建请求天气的URL
-      const weatherApiUrl = `https://api.vvhan.com/api/weather?ip=${ipAddress}`;
-      console.log(weatherApiUrl);
-      // 发送请求到天气API
+  // // 使用 ifinfo.io 或其他类似服务来获取用户IP
+  // fetch('https://api.vvhan.com/api/getIpInfo')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     // 提取IP地址
+  //     const ipAddress = data.ip;
+  //     console.log(ipAddress);
+  //     // 构建请求天气的URL
+      const weatherApiUrl = `https://api.vvhan.com/api/weather`;
+  //     console.log(weatherApiUrl);
+  //     // 发送请求到天气API
       fetch(weatherApiUrl)
         .then(weatherResponse => weatherResponse.json())
         .then(weatherData => {
@@ -114,12 +114,9 @@ function layoutDiv() {
           const tipContentElement = document.getElementById('tip-content');
           tipContentElement.textContent = tip;
         })
-    })
+    // })
   </script>
-<% } %> -->
-
-
-
+<% } %>
 
 <% if (theme.comments.waline.recentcomments) { %>
   <script type="module">
