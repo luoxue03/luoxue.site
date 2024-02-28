@@ -57,7 +57,7 @@ function layoutDiv() {
 
 <% if (theme.sidebar.widgets.weather.enable) { %>
   <script>
-    fetch('http://localhost:3000/tianqi')
+    fetch('https://api.szfx.top/tianqi/')
       .then(response => response.json())
       .then(data => {
         let city = data.city; // 数据：肠已断，泪难收。相思重上小红楼。
