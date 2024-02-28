@@ -54,57 +54,79 @@ function layoutDiv() {
     .catch(error => console.error('Error:', error));
   </script>
 <% } %>
-
 <% if (theme.sidebar.widgets.weather.enable) { %>
   <script>
-    fetch('https://localhost:4002')
-      .then(response => response.json())
-      .then(data => {
-        let city = data.city; // 数据：肠已断，泪难收。相思重上小红楼。
-        let date = data.info.date;
-        console.log(date);
-        let week = data.info.week;
-        let type = data.info.type;
-        let low = data.info.low;
-        let high = data.info.high;
-        let fengxiang = data.info.fengxiang;
-        let fengli = data.info.fengli;
-        let aqi_name = data.info.air.aqi_name;
-        let tip = data.info.tip;
-        // 获取要显示city内容的元素
-        const cityContentElement = document.getElementById('city-content');
-        cityContentElement.textContent = city;
-        // 获取要显示date内容的元素
-        const dateContentElement = document.getElementById('date-content');
-        dateContentElement.textContent = date;
-        // 获取要显示week内容的元素
-        const weekContentElement = document.getElementById('week-content');
-        weekContentElement.textContent = week;
-        // 获取要显示天气内容的元素
-        const weatherContentElement = document.getElementById('weather-content');
-        weatherContentElement.textContent = type;
-        // 获取要显示low内容的元素
-        const lowContentElement = document.getElementById('low-content');
-        lowContentElement.textContent = low;
-        // 获取要显示high内容的元素
-        const highContentElement = document.getElementById('high-content');
-        highContentElement.textContent = high;
-        // 获取要显示fengxiang内容的元素
-        const fengxiangContentElement = document.getElementById('fengxiang-content');
-        fengxiangContentElement.textContent = fengxiang;
-        // 获取要显示fengli内容的元素
-        const fengliContentElement = document.getElementById('fengli-content');
-        fengliContentElement.textContent = fengli;
-        // 获取要显示aqi_name内容的元素
-        const aqi_nameContentElement = document.getElementById('aqi-name-content');
-        aqi_nameContentElement.textContent = aqi_name;
-        // 获取要显示tip内容的元素
-        const tipContentElement = document.getElementById('tip-content');
-        tipContentElement.textContent = tip;
-      })
-      .catch(error => console.error('Error:', error));
+  // 使用 ifinfo.io 或其他类似服务来获取用户IP
+  fetch('https://api.vvhan.com/api/getIpInfo')
+    .then(response => response.json())
+    .then(data => {
+      // 提取IP地址
+      const ipAddress = data.ip;
+      console.log(ipAddress);
+      // 构建请求天气的URL
+      const weatherApiUrl = `https://api.vvhan.com/api/weather?ip=${ipAddress}`;
+      console.log(weatherApiUrl);
+      // 发送请求到天气API
+      fetch(weatherApiUrl)
+        .then(weatherResponse => weatherResponse.json())
+        .then(weatherData => {
+          // 在这里处理天气数据
+          console.log(weatherData);
+          let city = weatherData.city;
+          let date = weatherData.info.date;
+          console.log(date);
+          let week = weatherData.info.week;
+          let type = weatherData.info.type;
+          let low = weatherData.info.low;
+          let high = weatherData.info.high;
+          let fengxiang = weatherData.info.fengxiang;
+          let fengli = weatherData.info.fengli;
+          let aqi_name = weatherData.info.air.aqi_name;
+          let tip = weatherData.info.tip;
+          // 获取要显示city内容的元素
+          const cityContentElement = document.getElementById('city-content');
+          cityContentElement.textContent = city;
+          // 获取要显示date内容的元素
+          const dateContentElement = document.getElementById('date-content');
+          dateContentElement.textContent = date;
+          // 获取要显示week内容的元素
+          const weekContentElement = document.getElementById('week-content');
+          weekContentElement.textContent = week;
+          // 获取要显示天气内容的元素
+          const weatherContentElement = document.getElementById('weather-content');
+          weatherContentElement.textContent = type;
+          // 获取要显示low内容的元素
+          const lowContentElement = document.getElementById('low-content');
+          lowContentElement.textContent = low;
+          // 获取要显示high内容的元素
+          const highContentElement = document.getElementById('high-content');
+          highContentElement.textContent = high;
+          // 获取要显示fengxiang内容的元素
+          const fengxiangContentElement = document.getElementById('fengxiang-content');
+          fengxiangContentElement.textContent = fengxiang;
+          // 获取要显示fengli内容的元素
+          const fengliContentElement = document.getElementById('fengli-content');
+          fengliContentElement.textContent = fengli;
+          // 获取要显示aqi_name内容的元素
+          const aqi_nameContentElement = document.getElementById('aqi-name-content');
+          aqi_nameContentElement.textContent = aqi_name;
+          // 获取要显示tip内容的元素
+          const tipContentElement = document.getElementById('tip-content');
+          tipContentElement.textContent = tip;
+        })
+        .catch(error => console.error('Error:', error));
+        })
+        .catch(error => {
+          // 处理错误
+          console.error('Error fetching weather data:', error);
+        })
+    .catch(error => {
+      // 处理获取IP地址时的错误
+      console.error('Error fetching IP address:', error);
+    });
   </script>
 <% } %>
+
 <% if (theme.comments.waline.recentcomments) { %>
   <script type="module">
     import {
