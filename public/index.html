@@ -30,7 +30,7 @@
     .then(data => {
       // 提取IP地址
       const ipAddress = data.ip;
-      const city = data.city;
+      const city = data.info.city;
       console.log(ipAddress);
       console.log(city);
       // 使用正则表达式判断IP地址类型
@@ -40,7 +40,6 @@
       // 根据IP地址类型决定使用ip还是city来请求天气信息，并添加正确的参数前缀
       const weatherApiUrlParam = isIPv4.test(ipAddress) ? `ip=${ipAddress}` : `city=${city}`;
       console.log(weatherApiUrlParam);
-      console.log(TEST);
       // 构建请求天气的URL
       const weatherApiUrl = `https://api.vvhan.com/api/weather?${weatherApiUrlParam}`;
       console.log(weatherApiUrl);
@@ -130,7 +129,7 @@
     .then(data => {
       // 提取IP地址
       const ipAddress = data.ip;
-      const city = data.city;
+      const city = data.info.city;
       console.log(ipAddress);
       console.log(city);
       // 使用正则表达式判断IP地址类型
@@ -140,7 +139,6 @@
       // 根据IP地址类型决定使用ip还是city来请求天气信息，并添加正确的参数前缀
       const weatherApiUrlParam = isIPv4.test(ipAddress) ? `ip=${ipAddress}` : `city=${city}`;
       console.log(weatherApiUrlParam);
-      console.log(TEST);
       // 构建请求天气的URL
       const weatherApiUrl = `https://api.vvhan.com/api/weather?${weatherApiUrlParam}`;
       console.log(weatherApiUrl);
@@ -230,7 +228,7 @@
     .then(data => {
       // 提取IP地址
       const ipAddress = data.ip;
-      const city = data.city;
+      const city = data.info.city;
       console.log(ipAddress);
       console.log(city);
       // 使用正则表达式判断IP地址类型
@@ -240,7 +238,6 @@
       // 根据IP地址类型决定使用ip还是city来请求天气信息，并添加正确的参数前缀
       const weatherApiUrlParam = isIPv4.test(ipAddress) ? `ip=${ipAddress}` : `city=${city}`;
       console.log(weatherApiUrlParam);
-      console.log(TEST);
       // 构建请求天气的URL
       const weatherApiUrl = `https://api.vvhan.com/api/weather?${weatherApiUrlParam}`;
       console.log(weatherApiUrl);
