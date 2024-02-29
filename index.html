@@ -30,7 +30,7 @@
     .then(data => {
       // 提取IP地址
       const ipAddress = data.ip;
-      const city = data.city;
+      const city = data.info.city;
       console.log(ipAddress);
       console.log(city);
       // 使用正则表达式判断IP地址类型
@@ -130,7 +130,7 @@
     .then(data => {
       // 提取IP地址
       const ipAddress = data.ip;
-      const city = data.city;
+      const city = data.info.city;
       console.log(ipAddress);
       console.log(city);
       // 使用正则表达式判断IP地址类型
@@ -230,7 +230,7 @@
     .then(data => {
       // 提取IP地址
       const ipAddress = data.ip;
-      const city = data.city;
+      const city = data.info.city;
       console.log(ipAddress);
       console.log(city);
       // 使用正则表达式判断IP地址类型
