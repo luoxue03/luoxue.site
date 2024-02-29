@@ -31,13 +31,15 @@
       // 提取IP地址
       const ipAddress = data.ip;
       const city = data.city;
-
+      console.log(ipAddress)
+      console.log(city)
       // 使用正则表达式判断IP地址类型
       const isIPv4 = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
       const isIPv6 = /^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
 
       // 根据IP地址类型决定使用ip还是city来请求天气信息，并添加正确的参数前缀
       const weatherApiUrlParam = isIPv4.test(ipAddress) ? `ip=${ipAddress}` : `city=${city}`;
+      console.log(weatherApiUrlParam)
 
       // 构建请求天气的URL
       const weatherApiUrl = `https://api.vvhan.com/api/weather?${weatherApiUrlParam}`;
