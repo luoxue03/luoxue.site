@@ -165,7 +165,7 @@ deploy:
 - type: 'rsync'
   host: luoxue03.cn
   user: root
-  root: /root/blog/1
+  root: /root/blog/
   port: 22 # Default is 22
   delete: true # Default is true
   progress: true # Default is true
