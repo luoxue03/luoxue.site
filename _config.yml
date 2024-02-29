@@ -165,11 +165,11 @@ deploy:
 - type: 'rsync'
   host: luoxue03.cn
   user: root
-  root: /root/blog/
+  root: /root/blog/1
   port: 22 # Default is 22
   delete: true # Default is true
   progress: true # Default is true
-  args: -arLzh
+  args: -aLzh
   # rsh: <remote shell>
   # key: <key>
   verbose: true # Default is true
