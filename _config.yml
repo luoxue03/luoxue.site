@@ -159,7 +159,7 @@ neat_js:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
 - type: 'git'
-  repository: LX@luoxue03.cn/luoxue.site.git
+  repository: git@luoxue03.cn:/home/git/luoxue.site.git
   branch: main
   message: "Build at {{ now('yyyy-MM-DD HH:mm:ss Z') }}"
 # - type: 'git'
