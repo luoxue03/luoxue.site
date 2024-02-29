@@ -157,17 +157,14 @@ neat_js:
     # - 'custom/ZYDark.js'
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-# deploy:
+deploy:
+- type: 'git'
+  repository: LX@luoxue03.cn/luoxue.site.git
+  branch: main
+  message: "Build at {{ now('yyyy-MM-DD HH:mm:ss Z') }}"
 # - type: 'git'
 #   repository: git@github.com:luoxue03/luoxue.site.git
 #   branch: main
 #   message: "Build at {{ now('yyyy-MM-DD HH:mm:ss Z') }}"
-
-
-deploy:
-- type: 'git'
-  repository: git@luoxue03.cn/luoxue.site.git
-  branch: main
-  message: "Build at {{ now('yyyy-MM-DD HH:mm:ss Z') }}"
-- type: baidu_url_submitter
+# - type: baidu_url_submitter
 

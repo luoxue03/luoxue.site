@@ -62,19 +62,19 @@ function layoutDiv() {
     .then(data => {
       // 提取IP地址
       const ipAddress = data.ip;
-      console.log(ipAddress);
+      // console.log(ipAddress);
       // 构建请求天气的URL
       const weatherApiUrl = `https://api.vvhan.com/api/weather?ip=${ipAddress}`;
-      console.log(weatherApiUrl);
+      // console.log(weatherApiUrl);
       // 发送请求到天气API
       fetch(weatherApiUrl)
         .then(weatherResponse => weatherResponse.json())
         .then(weatherData => {
           // 在这里处理天气数据
-          console.log(weatherData);
+          // console.log(weatherData);
           let city = weatherData.city;
           let date = weatherData.info.date;
-          console.log(date);
+           // console.log(date);
           let week = weatherData.info.week;
           let type = weatherData.info.type;
           let low = weatherData.info.low;
