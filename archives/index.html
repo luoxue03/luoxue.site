@@ -40,7 +40,6 @@
       // 根据IP地址类型决定使用ip还是city来请求天气信息，并添加正确的参数前缀
       const weatherApiUrlParam = isIPv4.test(ipAddress) ? `ip=${ipAddress}` : `city=${city}`;
       console.log(weatherApiUrlParam);
-      console.log(TEST);
       // 构建请求天气的URL
       const weatherApiUrl = `https://api.vvhan.com/api/weather?${weatherApiUrlParam}`;
       console.log(weatherApiUrl);
