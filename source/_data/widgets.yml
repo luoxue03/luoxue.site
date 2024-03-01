@@ -18,6 +18,13 @@ weather:
     <span style="color: #93b5cf;" id="weather-content"></span>&nbsp;&nbsp;<span style="color: #96c6c9;" id="low-content"></span>&nbsp;&nbsp;<span style="color: #65b7c1;" id="high-content"></span>&nbsp;&nbsp;
     <span style="color: #7caba9;" id="fengxiang-content"></span>&nbsp;&nbsp;<span style="color: #91e3be;" id="fengli-content"></span>&nbsp;&nbsp;<span style="color: #DC9FB4;" id="aqi-name-content"></span>
 
+lishi:
+  layout: markdown
+  title: |
+    今日历史
+  content: |
+    <div id="historyDisplay"></div>
+
 
 waline-recent:
   layout: markdown

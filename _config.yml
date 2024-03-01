@@ -11,7 +11,8 @@ keywords:
   - '游戏'
   - 'IT'
 author: Luoxue
-avatar: https://cdn.jsdelivr.net/gh/luoxue03/ImagesHost/PIC/sxj219.ico
+# avatar: https://cdn.jsdelivr.net/gh/luoxue03/ImagesHost/PIC/sxj219.ico
+avatar: 'custom/img/sxg.png'
 favicon: https://cdn.jsdelivr.net/gh/luoxue03/ImagesHost/PIC/cat.ico
 language:
   - zh-CN
@@ -175,5 +176,7 @@ deploy:
   verbose: true # Default is true
   ignore_errors: false # Default is false
   create_before_update: false # Default is false
+- type: 'shell'
+  command: aliyun dcdn RefreshDcdnObjectCaches --endpoint dcdn.aliyuncs.com --ObjectPath "https://www.luoxue03.cn/"
 # - type: baidu_url_submitter
 
