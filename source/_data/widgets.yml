@@ -43,3 +43,10 @@ waline-wall:
   title: 读者墙
   content: |
     <div id="waline-wall"></div>
+
+new_comment:
+  layout: timeline
+  title: 最新评论
+  api: https://waline.luoxue03.cn # 此处为 Twikoo 函数
+  type: commentnew # 不要改动这个
+  limit: 10 # 限制获取数量，默认为 10

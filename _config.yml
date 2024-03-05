@@ -11,9 +11,9 @@ keywords:
   - '游戏'
   - 'IT'
 author: Luoxue
-# avatar: https://cdn.jsdelivr.net/gh/luoxue03/ImagesHost/PIC/sxj219.ico
+# avatar: https://fastly.jsdelivr.net/gh/luoxue03/ImagesHost/PIC/sxj219.ico
 avatar: 'custom/img/sxg.png'
-favicon: https://cdn.jsdelivr.net/gh/luoxue03/ImagesHost/PIC/cat.ico
+favicon: https://fastly.jsdelivr.net/gh/luoxue03/ImagesHost/PIC/cat.ico
 language:
   - zh-CN
   - en
@@ -110,7 +110,8 @@ theme: stellar
 
 inject:
   head:
-  - <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  - <link href="https://fonts.loli.net/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  # 谷歌字体 原fonts.googleapis.com 更改为 fonts.loli.net
   - <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
   - <link rel="stylesheet" href="/custom/css/ZYDark.css"> # 黑夜样式
   - |
@@ -124,6 +125,8 @@ inject:
   - <script type="text/javascript" src="/custom/js/ZYDark.js"></script> # 黑夜控制
   - <script type="text/javascript" src="/custom/js/ZYCode.js"></script> # 代码复制、折叠
   - <script src="https://kit.fontawesome.com/06b2d5b226.js" crossorigin="anonymous"></script>
+  - <script src="https://fastly.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 ### 百度提交 ###
 baidu_url_submit:
   count: 100 # 提交最新的一个链接
@@ -144,7 +147,7 @@ neat_css:
     - '*.min.css'
     - '**/*.min.css'
     - 'custom/ZYCode.css'
-    # - 'custom/ZYDark.css'
+    - 'custom/ZYDark.css'
 # 压缩js
 neat_js:
   enable: true
@@ -155,28 +158,38 @@ neat_js:
     - '*.min.js'
     - '**/*.min.js'
     - 'custom/ZYCode.js'
-    # - 'custom/ZYDark.js'
+    - 'custom/ZYDark.js'
+
+# npm i hexo-filter-jsdelivr-auto-fallback
+# 自动切换jsdelivr域名
+jsdelivr_auto_fallback:
+  enable: true
+  add_defer: true
+  dest_list:
+    - fastly.jsdelivr.net
+    - cdn.jsdelivr.net
+    - gcore.jsdelivr.net
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-- type: 'git'
-  repository: git@github.com:luoxue03/luoxue.site.git
-  branch: main
-  message: "Build at {{ now('yyyy-MM-DD HH:mm:ss Z') }}"
-- type: 'rsync'
-  host: luoxue03.cn
-  user: root
-  root: /root/blog/
-  port: 22 # Default is 22
-  delete: true # Default is true
-  progress: true # Default is true
-  args: -aLzh
-  # rsh: <remote shell>
-  # key: <key>
-  verbose: true # Default is true
-  ignore_errors: false # Default is false
-  create_before_update: false # Default is false
-- type: 'shell'
-  command: aliyun dcdn RefreshDcdnObjectCaches --endpoint dcdn.aliyuncs.com --ObjectPath "https://www.luoxue03.cn/"
+# - type: 'git'
+#   repository: git@github.com:luoxue03/luoxue.site.git
+#   branch: main
+#   message: "Build at {{ now('yyyy-MM-DD HH:mm:ss Z') }}"
+# - type: 'rsync'
+#   host: luoxue03.cn
+#   user: root
+#   root: /root/blog/
+#   port: 22 # Default is 22
+#   delete: true # Default is true
+#   progress: true # Default is true
+#   args: -aLzh
+#   # rsh: <remote shell>
+#   # key: <key>
+#   verbose: true # Default is true
+#   ignore_errors: false # Default is false
+#   create_before_update: false # Default is false
+# - type: 'shell'
+#   command: aliyun dcdn RefreshDcdnObjectCaches --endpoint dcdn.aliyuncs.com --ObjectPath "https://www.luoxue03.cn/"
 # - type: baidu_url_submitter
 
