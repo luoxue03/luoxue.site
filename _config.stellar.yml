@@ -1,7 +1,9 @@
 style:
   font-family:
-    body: '"Zfont","Kosugi Maru","LXGW WenKai Screen",sans-serif'
-    logo: '"Kosugi Maru",sans-serif'
+    # body: '"Zfont","Noto Serif SC","Kosugi Maru","LXGW WenKai Screen",sans-serif'
+    # logo: '"Zfont","Kosugi Maru",sans-serif'
+    body: '"寒蝉全圆体",sans-serif'
+    logo: '"寒蝉全圆体",sans-serif'
     code: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
     codeblock: 'Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
   darkmode: false # auto / always / false
