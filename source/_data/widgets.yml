@@ -2,35 +2,32 @@ welcome:
   layout: markdown
   title: 欢迎，博士：
   content: |
-    <p id="hitokoto" style="font-size: 14px !important;color: #5b9ff5;"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
-    <p id="hitokoto_who" style="font-size: 12px!important;color: #6f6dd9;display: inline-block; text-align: right;font-style: italic;"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
-    <p id="hitokoto_from" style="font-size: 12px !important;color: #cf9d9f; display: inline-block; text-align: left; margin-right: 10px;font-style: italic;"><a href="#" id="hitokoto_text">🏞️获取中...</a></p>
+    <p id="hitokoto" style="font-size: 14px !important;color: #90a4bd;"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
+    <p id="hitokoto_who" style="font-size: 12px!important;color: #b0b0d1;display: inline-block; text-align: right;font-style: italic;"> <a href="#" id="hitokoto_text">🏞️获取中...</a> </p>
+    <p id="hitokoto_from" style="font-size: 12px !important;color: #b6b5e9; display: inline-block; text-align: left; margin-right: 10px;font-style: italic;"><a href="#" id="hitokoto_text">🏞️获取中...</a></p>
 
 weather:
   layout: markdown
   title: |
-    今日天气🌦️：<p id="tip-content" style="display: inline-block;"></p>
+      实时天气🌦️：
+  linklist:
+    columns: 1
+    items:
+      - icon: <i class="icon-content"></i>
+        title: 天气详情
+        url: https://www.qweather.com/weather/
   content: |
     <div>
-    <span style="color: #f07c82;font-weight: bold;" id="city-content"></span>&nbsp;&nbsp;<span id="date-content" style="color: #f07c82;"></span>&nbsp;<span style="color: #f07c82;"></span>&nbsp;<span id="week-content" style="color: #f07c82;"></span><span style="color: #DC9FB4;">：</span>
-    </div>
-
-    <span style="color: #93b5cf;" id="weather-content"></span>&nbsp;&nbsp;<span style="color: #96c6c9;" id="low-content"></span>&nbsp;&nbsp;<span style="color: #65b7c1;" id="high-content"></span>&nbsp;&nbsp;
-    <span style="color: #7caba9;" id="fengxiang-content"></span>&nbsp;&nbsp;<span style="color: #91e3be;" id="fengli-content"></span>&nbsp;&nbsp;<span style="color: #DC9FB4;" id="aqi-name-content"></span>
-
-lishi:
-  layout: markdown
-  title: |
-    今日历史
-  content: |
-    <div id="historyDisplay"></div>
-
-
-waline-recent:
-  layout: markdown
-  title: 最近评论
-  content: |
-    <div id="waline-recent"></div>
+    <span id="obsTime-content"></span>&nbsp;<i class="icon-content"></i>
+    <span id="city-content"></span>
+    <span style="color: #f07c82;"></span>
+    <span id="temp-content"></span>
+    <span class="icon-content"></span>
+    <span id="text-content"></span>
+    <span id="windDir-content"></span>
+    <span id="windScale-content"></span>
+    <span id="fengli-content"></span>
+    <span id="aqi-name-content"></span>
 
 waline-users:
   layout: markdown
@@ -50,3 +47,10 @@ new_comment:
   api: https://waline.luoxue03.cn # 此处为 Twikoo 函数
   type: commentnew # 不要改动这个
   limit: 10 # 限制获取数量，默认为 10
+
+history:
+  layout: timeline
+  title: 历史上的今天
+  api: https://tenapi.cn/v2/history
+  type: history
+  limit:
