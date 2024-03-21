@@ -11,18 +11,18 @@ OSTheme.addListener((e) => {
 /**
  * 自动模式 6:00-18:00-Light 18:00-6:00-Dark,开启后每三十分钟检查一次
  */
-const AutoMode = (htmlElement) => {
-    var date = new Date();
-    var hours = date.getHours();
-    if (hours < 18 && hours >= 6) {
-        document.querySelector("html").id = "Light";
-    } else {
-        document.querySelector("html").id = "Dark";
-    }
-    // if (htmlElement.id === "Light") {    // 闪瞎你的眼模式（速度快一点的话）
-    //     htmlElement.id = "Dark";
-    // } else { htmlElement.id = "Light"; }
-};
+// const AutoMode = (htmlElement) => {
+//     var date = new Date();
+//     var hours = date.getHours();
+//     if (hours < 18 && hours >= 6) {
+//         document.querySelector("html").id = "Light";
+//     } else {
+//         document.querySelector("html").id = "Dark";
+//     }
+//     // if (htmlElement.id === "Light") {    // 闪瞎你的眼模式（速度快一点的话）
+//     //     htmlElement.id = "Dark";
+//     // } else { htmlElement.id = "Light"; }
+// };
 
 let autoTimer;
 
@@ -59,10 +59,10 @@ const ThemeChange = (theme) => {
         if (themeBtnIcon) {
             themeBtnIcon.className = "fa-solid fa-circle-half-stroke fa-flip";
         }
-        AutoMode(htmlElement);
-        autoTimer = setInterval(function () {
-            AutoMode(htmlElement);
-        }, 1000 * 60 * 30); // 半小时一次
+        // AutoMode(htmlElement);
+        // autoTimer = setInterval(function () {
+        //     AutoMode(htmlElement);
+        // }, 1000 * 60 * 30); // 半小时一次
     }
     window.localStorage.setItem("Theme_Mode", theme);
 };
